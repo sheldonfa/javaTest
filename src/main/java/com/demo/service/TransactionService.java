@@ -1,6 +1,5 @@
 package com.demo.service;
 
-import org.springframework.stereotype.Service;
 
 /**
  * Created by Administrator on 2016/11/9.
