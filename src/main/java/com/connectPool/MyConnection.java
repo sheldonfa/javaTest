@@ -14,6 +14,7 @@ import java.util.concurrent.Executor;
 /**
  * mysql的com.mysql.jdbc.Connection实现了java.sql.Connection接口
  * 所以装饰类也需要实现java.sql.Connection接口
+ * MyConnection 实现的无用方法太多，有时间可以改为默认适配器模式：先继承，在重写close方法
  */
 public class MyConnection implements Connection{
 
