@@ -1,6 +1,5 @@
 package com.jdbc;
 
-import java.io.File;
 import java.sql.*;
 import java.util.ResourceBundle;
 
@@ -50,14 +49,16 @@ public class JDBCDemo5DBUtils {
         url = bundle.getString("url");
         username = bundle.getString("username");
         password = bundle.getString("password");
+        try {
+            Class.forName(driverClass);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     // 获取连接
     public static Connection getConnection() throws SQLException, ClassNotFoundException {
-        // 提取配置属性
-        Class.forName(driverClass);
-        Connection conn = DriverManager.getConnection(url, username, password);
-        return conn;
+        return DriverManager.getConnection(url, username, password);
     }
 
     // 关闭连接
