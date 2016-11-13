@@ -5,9 +5,9 @@ import java.util.Collections;
 import java.util.LinkedList;
 
 //模拟数据库连接池，但不具备实际开发意义
-public class pool1SimpleConnectionPool {
+public class Pool1SimpleConnectionPool {
 	//创建一个存放连接的池子
-	private static LinkedList<Connection> pool = (LinkedList<Connection>) Collections.synchronizedList(new LinkedList<Connection>());
+	private static LinkedList<Connection> pool = new LinkedList<Connection>();
 
 	static{
 		try {
@@ -21,7 +21,7 @@ public class pool1SimpleConnectionPool {
 	}
 
 	//得到一个连接
-	public static  Connection getConnectionFromPool(){
+	public Connection getConnectionFromPool(){
 		Connection conn = null;
 		if(pool.size()>0){
 			conn =  pool.removeFirst();//从池中取出一个连接
@@ -34,7 +34,7 @@ public class pool1SimpleConnectionPool {
 
 	}
 	//释放资源
-	public static  void release(Connection conn){
+	public void release(Connection conn){
 		pool.addLast(conn);
 	}
 }
