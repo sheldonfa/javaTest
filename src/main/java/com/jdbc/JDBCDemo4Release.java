@@ -4,13 +4,10 @@ import java.sql.*;
 
 /**
  * Created by Administrator on 2016/11/10 0010.
- * 创建jdbc链接
+ * 创建jdbc连接，释放资源很重要
  */
 public class JDBCDemo4Release {
     public static void main(String[] args){
-        /**
-         * Class.forName("com.mysql.jdbc.Driver");的方式注册驱动
-         */
         Connection conn = null;
         Statement st = null;
         ResultSet rs = null;
