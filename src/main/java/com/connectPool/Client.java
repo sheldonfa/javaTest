@@ -26,9 +26,7 @@ public class Client {
             conn = DBUtils.getConnection();
             String sql = "select * from user where id = ?";
             st = conn.prepareStatement(sql);
-            // 如果？是string类型 用setString
             st.setInt(1,1);
-            // executeQuery方法中不再需要sql参数
             rs = st.executeQuery();
             while (rs.next()) {
                 System.out.println(rs.getObject(1));
@@ -57,9 +55,7 @@ public class Client {
             conn = pool.getConnectionFromPool();
             String sql = "select * from user where id = ?";
             st = conn.prepareStatement(sql);
-            // 如果？是string类型 用setString
             st.setInt(1, 1);
-            // executeQuery方法中不再需要sql参数
             rs = st.executeQuery();
             while (rs.next()) {
                 System.out.println(rs.getObject(1));
@@ -85,7 +81,7 @@ public class Client {
                 }
                 st=null;
             }
-            // 数据源提供放回连接的方法
+            // 自定义数据源提供放回连接的方法
             pool.release(conn);
         }
     }
@@ -107,9 +103,7 @@ public class Client {
             conn = ds.getConnection();
             String sql = "select * from user where id = ?";
             st = conn.prepareStatement(sql);
-            // 如果？是string类型 用setString
             st.setInt(1, 1);
-            // executeQuery方法中不再需要sql参数
             rs = st.executeQuery();
             while (rs.next()) {
                 System.out.println(rs.getObject(1));
@@ -135,7 +129,7 @@ public class Client {
                 }
                 st=null;
             }
-            // 这里依然关闭conn，但是conn.close()已经被包装了
+            // 保持原来的编码规范，这里依然关闭conn，但是conn.close()已经被包装了
             if(conn!=null){
                 try {
                     conn.close();

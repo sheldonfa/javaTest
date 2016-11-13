@@ -12,11 +12,11 @@ import java.util.LinkedList;
 import java.util.logging.Logger;
 
 /**
- * 数据库连接池减少了创建数据库连接的操作
+ * 实现接口规范的数据源
  */
-public class pool2MyDataSource implements DataSource{
+public class Pool2MyDataSource implements DataSource{
     //创建一个存放连接的池子
-    private static LinkedList<Connection> pool = (LinkedList<Connection>) Collections.synchronizedList(new LinkedList<Connection>());
+    private static LinkedList<Connection> pool = new LinkedList<Connection>();
 
     static{
         try {
@@ -25,7 +25,7 @@ public class pool2MyDataSource implements DataSource{
                 pool.add(conn);
             }
         } catch (Exception e) {
-            throw new ExceptionInInitializerError("初始化数据库连接失败，请检查配置文件是否正确！");
+            throw new ExceptionInInitializerError("error");
         }
     }
 
@@ -33,40 +33,38 @@ public class pool2MyDataSource implements DataSource{
         Connection conn = null;
         if(pool.size()>0){
             conn =  pool.removeFirst();//从池中取出一个连接
-            return conn;
+            // 对获取到的conn进行装饰，以改写close方法
+            MyConnection myConn = new MyConnection(conn, pool);
+            return myConn;
         }else{
             //等待
             //新创建一个连接
-            throw new RuntimeException("服务器忙。。。");
+            throw new RuntimeException("server error");
         }
     }
 
-
-    public Connection getConnection(String username, String password)
-            throws SQLException {
-        // TODO Auto-generated method stub
+    @Override
+    public Connection getConnection(String username, String password) throws SQLException {
         return null;
     }
 
-
-
+    @Override
     public PrintWriter getLogWriter() throws SQLException {
-        // TODO Auto-generated method stub
         return null;
     }
 
+    @Override
     public void setLogWriter(PrintWriter out) throws SQLException {
-        // TODO Auto-generated method stub
 
     }
 
+    @Override
     public void setLoginTimeout(int seconds) throws SQLException {
-        // TODO Auto-generated method stub
 
     }
 
+    @Override
     public int getLoginTimeout() throws SQLException {
-        // TODO Auto-generated method stub
         return 0;
     }
 
@@ -75,18 +73,13 @@ public class pool2MyDataSource implements DataSource{
         return null;
     }
 
+    @Override
     public <T> T unwrap(Class<T> iface) throws SQLException {
-        // TODO Auto-generated method stub
         return null;
     }
 
+    @Override
     public boolean isWrapperFor(Class<?> iface) throws SQLException {
-        // TODO Auto-generated method stub
         return false;
     }
-
-
-
-
-
 }
