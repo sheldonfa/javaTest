@@ -30,6 +30,5 @@ public class JDBCDemo6PrepareStatement {
             DBUtils.closeAll(rs,st,conn);
 
         }
-
     }
 }
