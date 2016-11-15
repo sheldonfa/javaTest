@@ -160,6 +160,22 @@
       <artifactId>standard</artifactId>
       <version>1.1.2</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+    <!--dbcp数据源-->
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.4</version>
+    </dependency>
+
+    <!--C3P0数据源-->
+    <!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
+    <dependency>
+      <groupId>c3p0</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.1.2</version>
+    </dependency>
   </dependencies>
 
 
