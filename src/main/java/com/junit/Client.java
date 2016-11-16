@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Created by Administrator on 2016/11/13.
  */
-public class JunitTest {
+public class Client {
 
     @Test
     public void testAdd(){
