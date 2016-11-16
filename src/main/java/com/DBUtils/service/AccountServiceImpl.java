@@ -1,5 +1,6 @@
 package com.DBUtils.service;
 
+import com.DBUtils.ManagerThreadLocal;
 import com.DBUtils.dao.AccountDao;
 import com.DBUtils.dao.AccountDaoImpl;
 import com.DBUtils.model.Account;
@@ -35,6 +36,26 @@ public class AccountServiceImpl implements AccountService{
             } catch (SQLException e1) {
                 e1.printStackTrace();
             }
+        }
+    }
+
+    public void transfer2(String fromName,String toName,Double money){
+        AccountDao dao = new AccountDaoImpl();
+        try {
+            ManagerThreadLocal.startTransaction();
+            Account fromAccount = dao.findAccountByName2(fromName);
+            Account toAccount = dao.findAccountByName2(toName);
+            fromAccount.setMoney(fromAccount.getMoney()-money);
+            toAccount.setMoney(toAccount.getMoney()+money);
+            // 更新
+            dao.updateAccount2(fromAccount);
+//            int i = 1 / 0;
+            dao.updateAccount2(toAccount);
+            ManagerThreadLocal.commit();
+        } catch (Exception e) {
+            ManagerThreadLocal.rollback();
+        }finally{
+            ManagerThreadLocal.close();
         }
     }
 }

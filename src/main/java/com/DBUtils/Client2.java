@@ -35,5 +35,9 @@ public class Client2 {
     /**
      * 案例二：转账之————解决事务的链接代码入侵业务层
      */
-    //TODO
+    @Test
+    public void testAccount2(){
+        AccountService account = new AccountServiceImpl();
+        account.transfer2("zhangsan","lisi",10d);
+    }
 }

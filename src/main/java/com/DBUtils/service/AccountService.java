@@ -6,4 +6,6 @@ package com.DBUtils.service;
 public interface AccountService {
 
     void transfer(String fromName,String toName,Double money);
+
+    void transfer2(String fromName,String toName,Double money);
 }
