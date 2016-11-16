@@ -15,7 +15,9 @@ public class ManagerThreadLocal {
     public static Connection getConnection(){
         Connection conn = tl.get();
         if(conn==null){
+            // startTransaction中是第一次获取conn，会走数据源获取conn，后面都不回再走这里了
             conn = C3P0Utils.getConnection();
+            // 将获取到的conn放到当前线程的局部变量中，方便后面使用
             tl.set(conn);
         }
         return conn;
