@@ -176,6 +176,15 @@
       <artifactId>c3p0</artifactId>
       <version>0.9.1.2</version>
     </dependency>
+
+    <!--DBUtils Apache-->
+    <!-- https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils -->
+    <dependency>
+      <groupId>commons-dbutils</groupId>
+      <artifactId>commons-dbutils</artifactId>
+      <version>1.6</version>
+    </dependency>
+
   </dependencies>
 
 

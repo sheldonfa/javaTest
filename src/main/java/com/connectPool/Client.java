@@ -1,6 +1,9 @@
 package com.connectPool;
 
 
+import com.demo.pojo.User;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.ibatis.annotations.Result;
 import org.junit.Test;
 
@@ -201,4 +204,5 @@ public class Client {
      * javaWeb服务器tomcat内置数据源（C3P0）
      * 只需要配置即可
      */
+    // 略
 }
