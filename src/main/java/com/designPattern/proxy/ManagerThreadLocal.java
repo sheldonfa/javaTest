@@ -20,18 +20,20 @@ public class ManagerThreadLocal {
             conn = C3P0Utils.getConnection();
             // 将获取到的conn放到当前线程的局部变量中，方便后面使用
             tl.set(conn);
+            System.out.println("第一次获取连接，并放到ThreadLocal中");
         }
         return conn;
     }
 
     public static void startTransaction(){
+        System.out.println("开启事务");
         Connection conn = getConnection();
         try {
             conn.setAutoCommit(false);
+            System.out.println("设置conn为false");
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println("开启事务");
     }
 
     public static void commit(){

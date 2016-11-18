@@ -11,6 +11,9 @@ import java.sql.SQLException;
  */
 public class Client {
 
+    /**
+     * AOP+动态代理 解决转账事务
+     */
     @Test
     public void testAccountWithAOP() throws Exception {
         AccountService service = ObjectFactory.getAccountService();
