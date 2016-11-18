@@ -1,8 +1,6 @@
 package com.designPattern.proxy.service;
 
-import com.DBUtils.ManagerThreadLocal;
 import com.DBUtils.model.Account;
-import com.connectPool.C3P0Utils;
 import com.designPattern.proxy.dao.AccountDao;
 import com.designPattern.proxy.dao.AccountDaoImpl;
 
@@ -38,7 +36,7 @@ public class AccountServiceImpl implements AccountService {
 //        }
 //    }
 
-    public void transfer2(String fromName,String toName,Double money) throws SQLException {
+    public void transfer2(String fromName,String toName,Double money) throws Exception {
         AccountDao dao = new AccountDaoImpl();
         Account fromAccount = dao.findAccountByName2(fromName);
         Account toAccount = dao.findAccountByName2(toName);

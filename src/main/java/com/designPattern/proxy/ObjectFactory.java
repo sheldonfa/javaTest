@@ -13,15 +13,16 @@ import java.lang.reflect.Proxy;
 public class ObjectFactory {
 
     public static AccountService getAccountService(){
-        AccountService service = new AccountServiceImpl();
+        final AccountService service = new AccountServiceImpl();
 
         AccountService proxy = (AccountService)Proxy.newProxyInstance(service.getClass().getClassLoader(), service.getClass().getInterfaces(), new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 Object invoke = null;
                 try{
+                    //这个地方不能打断点 否则事务不回滚，令人费解
                     ManagerThreadLocal.startTransaction();
-                    invoke = method.invoke(proxy, args);
+                    invoke = method.invoke(service, args);
                     ManagerThreadLocal.commit();
                 }catch(Exception e){
                     try {

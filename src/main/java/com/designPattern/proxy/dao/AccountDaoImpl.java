@@ -1,6 +1,6 @@
 package com.designPattern.proxy.dao;
 
-import com.DBUtils.ManagerThreadLocal;
+import com.designPattern.proxy.ManagerThreadLocal;
 import com.DBUtils.model.Account;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;

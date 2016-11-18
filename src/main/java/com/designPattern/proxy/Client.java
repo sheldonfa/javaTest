@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class Client {
 
     @Test
-    public void testAccountWithAOP() throws SQLException {
+    public void testAccountWithAOP() throws Exception {
         AccountService service = ObjectFactory.getAccountService();
         service.transfer2("zhangsan","lisi",1d);
     }

@@ -14,6 +14,7 @@ public class ManagerThreadLocal {
     
     public static Connection getConnection(){
         Connection conn = tl.get();
+        System.out.println("conn==========================="+conn+"===========thread========="+tl);
         if(conn==null){
             // startTransaction中是第一次获取conn，会走数据源获取conn，后面都不回再走这里了
             conn = C3P0Utils.getConnection();
@@ -30,6 +31,7 @@ public class ManagerThreadLocal {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("开启事务");
     }
 
     public static void commit(){
@@ -39,6 +41,7 @@ public class ManagerThreadLocal {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("提交事务");
     }
 
     public static void rollback(){
@@ -48,6 +51,7 @@ public class ManagerThreadLocal {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("回滚事务");
     }
 
     public static void close(){
@@ -57,5 +61,6 @@ public class ManagerThreadLocal {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("关闭连接");
     }
 }

@@ -49,7 +49,7 @@ public class AccountServiceImpl implements AccountService{
             toAccount.setMoney(toAccount.getMoney()+money);
             // 更新
             dao.updateAccount2(fromAccount);
-//            int i = 1 / 0;
+            int i = 1 / 0;
             dao.updateAccount2(toAccount);
             ManagerThreadLocal.commit();
         } catch (Exception e) {
