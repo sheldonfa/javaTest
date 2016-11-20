@@ -13,7 +13,7 @@ import java.util.Map;
  */
 @RequestMapping("springUser")
 @Controller
-public class SpringUserController {
+public class Client {
 
     @RequestMapping("/userIndex")
     public String userIndex(){
@@ -30,5 +30,14 @@ public class SpringUserController {
     public void getUser(User user, HttpServletRequest request){
         Integer lucky = user.getLuckyNums().get(0);
         System.out.println("答案"+lucky);
+    }
+
+    /**
+     * 上传
+     */
+    // TODO: 2016/11/20   
+    @RequestMapping("/unload")
+    public void upload(){
+        System.out.println("上传");
     }
 }
