@@ -14,7 +14,7 @@
 		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
 
     <!--配置handler扫描包-->
-    <context:component-scan base-package="com.demo.controller"/>
+    <context:component-scan base-package="com.demo.controller;frame.springmvc"/>
 
     <!--使用mvc标签配置注解方式的处理器映射器和处理器适配器，默认加载了很多转换器，比如json的数据类型转换器-->
     <mvc:annotation-driven></mvc:annotation-driven>
