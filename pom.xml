@@ -193,6 +193,7 @@
       <version>1.4</version>
     </dependency>
 
+    <!--springmvc中不能用HttpServletRequest，加上就好了-->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
