@@ -14,7 +14,7 @@ public class DBUtils {
 	private static String password;
 
 	static{
-		//´Ë¶ÔÏóÊÇÓÃÓÚ¼ÓÔØpropertiesÎÄ¼şÊı¾İµÄ
+		//æ­¤å¯¹è±¡æ˜¯ç”¨äºåŠ è½½propertiesæ–‡ä»¶æ•°æ®çš„
 		ResourceBundle rb = ResourceBundle.getBundle("com.jdbc.dbinfo");
 		driverClass = rb.getString("driverClass");
 		url = rb.getString("url");
@@ -27,14 +27,14 @@ public class DBUtils {
 		}
 	}
 
-	//µÃµ½Á¬½ÓµÄ·½·¨
+	//å¾—åˆ°è¿æ¥çš„æ–¹æ³•
 	public static Connection getConnection() throws Exception{
 		return DriverManager.getConnection(url, username, password);
 	}
 
-	//¹Ø±Õ×ÊÔ´µÄ·½·¨
+	//å…³é—­èµ„æºçš„æ–¹æ³•
 	public static void closeAll(ResultSet rs,Statement stmt,Connection conn){
-		//¹Ø±Õ×ÊÔ´
+		//å…³é—­èµ„æº
 		if(rs!=null){
 			try {
 				rs.close();
