@@ -193,6 +193,24 @@
       <version>1.4</version>
     </dependency>
 
+    <!--序列化-->
+    <!--hessian-->
+    <!-- https://mvnrepository.com/artifact/com.caucho/hessian -->
+    <dependency>
+      <groupId>com.caucho</groupId>
+      <artifactId>hessian</artifactId>
+      <version>4.0.7</version>
+    </dependency>
+
+    <!--xml序列化-->
+    <!-- https://mvnrepository.com/artifact/xstream/xstream -->
+    <dependency>
+      <groupId>xstream</groupId>
+      <artifactId>xstream</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+
+
     <!--springmvc中不能用HttpServletRequest，加上就好了-->
     <dependency>
       <groupId>javax.servlet</groupId>
