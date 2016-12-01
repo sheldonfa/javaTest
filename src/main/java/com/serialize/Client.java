@@ -94,7 +94,7 @@ public class Client {
     }
 
     /**
-     * json序列化，使用jackson方式一
+     * json序列化，使用jackson方式二
      */
     @Test
     public void testJsonSerialzation2() throws IOException {

@@ -10,8 +10,11 @@ import java.util.List;
 public class User {
     private Integer id;
     private String  username;
-    private List<String> friends = new ArrayList<String>();
-    private List<Integer> luckyNums = new ArrayList<Integer>();
+    private Date    birthday;
+    private List<Integer> luckyNums;
+    private String[]  luckyString;
+    private List<Person> friends = new ArrayList();
+
 
     public Integer getId() {
         return id;
@@ -29,12 +32,20 @@ public class User {
         this.username = username;
     }
 
-    public List<String> getFriends() {
+    public List<Person> getFriends() {
         return friends;
     }
 
-    public void setFriends(List<String> friends) {
+    public void setFriends(List<Person> friends) {
         this.friends = friends;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public List<Integer> getLuckyNums() {
@@ -45,13 +56,23 @@ public class User {
         this.luckyNums = luckyNums;
     }
 
+    public String[] getLuckyString() {
+        return luckyString;
+    }
+
+    public void setLuckyString(String[] luckyString) {
+        this.luckyString = luckyString;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", friends=" + friends +
+                ", birthday=" + birthday +
                 ", luckyNums=" + luckyNums +
+                ", luckyString=" + luckyString +
+                ", friends=" + friends +
                 '}';
     }
 }
