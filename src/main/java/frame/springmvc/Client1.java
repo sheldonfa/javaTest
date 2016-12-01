@@ -118,6 +118,6 @@ public class Client1 {
 
     @RequestMapping("/index")
     public String client1(){
-        return "client1";
+        return "/frame/springmvc/client1";
     }
 }
