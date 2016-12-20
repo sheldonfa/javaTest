@@ -43,7 +43,7 @@ public class Client {
     @Test
     public void test2() throws InterruptedException {
         AutomicCount count = new AutomicCount();
-        List<Thread> threadList = new ArrayList();
+        List<Thread> threadList = new ArrayList<Thread>();
         for(int i=0;i<500;i++){
             Thread ti = new Thread(count);
             threadList.add(ti);
@@ -60,7 +60,7 @@ public class Client {
     @Test
     public void test3() throws InterruptedException {
         SynchronCount count = new SynchronCount();
-        List<Thread> threadList = new ArrayList();
+        List<Thread> threadList = new ArrayList<Thread>();
         for(int i=0;i<500;i++){
             Thread ti = new Thread(count);
             threadList.add(ti);
