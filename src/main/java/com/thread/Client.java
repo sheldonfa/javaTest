@@ -9,13 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * test方法不是main方法，当test方法执行结束，其他线程会立即停止，所以这里必须sleep
- *
+ * 注意：test方法不是main方法，当test方法执行结束，其他线程会立即停止，所以这里必须sleep，而且sleep时间要够运行的
+ * 注意：test方法不是main方法，当test方法执行结束，其他线程会立即停止，所以这里必须sleep，而且sleep时间要够运行的
+ * 注意：test方法不是main方法，当test方法执行结束，其他线程会立即停止，所以这里必须sleep，而且sleep时间要够运行的
  */
 public class Client {
 
     /**
-     * 竞态条件：当某个计算的正确性取决于多个线程的交替执行时序时，就会发生~
+     * 竞态条件：当某个计算的正确性取决于多个线程的交替执行时序时，就会发生静态条件
      * 特点：先检查后执行
      * 案例：如延迟初始化
      * @from java并发编程实战p16
@@ -23,7 +24,7 @@ public class Client {
     @Test
     public void test1() throws InterruptedException {
         Count count = new Count();
-        List<Thread> threadList = new ArrayList();
+        List<Thread> threadList = new ArrayList<Thread>();
         for(int i=0;i<500;i++){
             Thread ti = new Thread(count);
             threadList.add(ti);
