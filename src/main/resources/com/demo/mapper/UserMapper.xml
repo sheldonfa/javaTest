@@ -27,4 +27,20 @@
         </if>
         where id = #{userId}
     </update>
+
+    <select id="testObj1" parameterType="int" resultType="user">
+        SELECT * FROM user
+    </select>
+
+    <select id="testObj2" parameterType="int" resultType="user">
+        SELECT * FROM user
+    </select>
+
+    <select id="testMap1" resultType="java.util.HashMap">
+        select * from user
+    </select>
+
+    <select id="testMap2" resultType="java.util.HashMap">
+        select * from user
+    </select>
 </mapper>

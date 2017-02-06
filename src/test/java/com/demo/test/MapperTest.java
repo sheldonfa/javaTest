@@ -29,4 +29,11 @@ public class MapperTest {
         User user = userService.findUserById(1);
         System.out.println(user);
     }
+
+    @Test
+    public void test(){
+        int s;
+        System.out.println(s);
+    }
+
 }

@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class User {
     private Integer id;
-    private String  username;
+    public String[]  username = new String[]{"father"};
     private Date    birthday;
     private String  sex;
     private String  address;
@@ -21,13 +21,13 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
+//    public String getUsername() {
+//        return username;
+//    }
+//
+//    public void setUsername(String username) {
+//        this.username = username;
+//    }
 
     public Date getBirthday() {
         return birthday;

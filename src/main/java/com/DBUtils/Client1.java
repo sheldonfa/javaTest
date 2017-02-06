@@ -144,7 +144,7 @@ public class Client1 {
                 while(rs.next()){
                     User u = new User();
                     u.setId(rs.getInt(1));
-                    u.setUsername(rs.getString(2));
+//                    u.setUsername(rs.getString(2));
                     u.setCash(rs.getDouble(3));
                     list.add(u);
                 }
