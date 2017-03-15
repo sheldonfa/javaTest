@@ -1,17 +1,14 @@
 package com.demo.test;
 
 
-import com.demo.mapper.UserMapper;
 import com.demo.pojo.User;
 import com.demo.service.UserService;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
 
 /**
  * Created by Administrator on 2016/7/30.
@@ -24,16 +21,26 @@ public class MapperTest {
     @Autowired
     private UserService userService;
 
-    @Test
-    public void testFindUserByUserVo() throws Exception {
-        User user = userService.findUserById(1);
-        System.out.println(user);
-    }
+//    @Test
+//    public void testFindUserByUserVo() throws Exception {
+//        User user = userService.findUserById(1);
+//        System.out.println(user);
+//        Thread thread = new Thread();
+//        String doc = "doctor";
+//        switch (doc) {
+//            case "doctor":
+//                break;
+//            default:
+//                break;
+//        }
+//    }
 
-    @Test
-    public void test(){
-        int s;
-        System.out.println(s);
-    }
+//    @Test
+//    public void test1(){
+//        byte a =1;
+//        byte b =2;
+//        byte c;
+//        c = (byte) (a+b);
+//    }
 
 }
