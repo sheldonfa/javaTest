@@ -1,10 +1,10 @@
-package com.algorithms.base.threesum;
+package com.algorithms.base.d1threesum;
 
 
 
 import com.algorithms.model.In;
 import com.algorithms.model.StdOut;
-
+import com.algorithms.model.StopWatch;
 
 
 /**
@@ -41,6 +41,8 @@ public class ThreeSum {
         String arr8 = "http://algs4.cs.princeton.edu/14analysis/4Kints.txt";
         // 4Kints.txt中包含1Mints.txt中的4000个数字，已经很慢了
         int[] a = In.readInts(arr4);
+        StopWatch watch = new StopWatch();
         StdOut.println(count(a));
+        System.out.println(watch.elapsedTime());
     }
 }
