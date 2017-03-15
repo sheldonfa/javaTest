@@ -46,11 +46,24 @@ public class Tlt {
         return 0;
     }
 
-    public static Integer[] random(int N,int rangeL,int rangeR){
-        Integer[] a = new Integer[N];
-        for(int i=0;i<N;i++){
+    public static Integer[] random(int n,int rangeL,int rangeR){
+        Integer[] a = new Integer[n];
+        for(int i=0;i<n;i++){
             a[i] = StdRandom.uniform(rangeL,rangeR);
         }
         return a;
+    }
+
+    public static Integer[] nearlyOrderedRandom(int n,int swapTimes){
+        Integer[] arr = new Integer[n];
+        for(int i=0;i<n;i++){
+            arr[i] = i;
+        }
+        for(int k=0;k<swapTimes;k++){
+            int u = StdRandom.uniform(0, n);
+            int v = StdRandom.uniform(0, n);
+            Tlt.exch(arr,u,v);
+        }
+        return arr;
     }
 }

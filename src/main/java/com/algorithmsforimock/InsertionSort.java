@@ -42,9 +42,21 @@ public class InsertionSort {
         }
     }
 
+    public static void sort2(Comparable[] arr,int l,int r){
+        for(int i=l+1;i<=r;i++){
+            Comparable e = arr[i];
+            int j;
+            for(j=i;j>l && Tlt.less(e,arr[j-1]);j--){
+                // j-1向后移动
+                arr[j] = arr[j-1];
+            }
+            arr[j] = e;
+        }
+    }
+
     public static void main(String[] args) {
-        Integer[] random = Tlt.random(10000, 0, 10000);
-        sort2(random);
+        Integer[] random = Tlt.random(10, 0, 10);
+        sort2(random,1,9);
         Tlt.show(random);
     }
 }

@@ -50,4 +50,60 @@ public class Client {
         System.out.println("优化插入排序耗时："+sw2.elapsedTime());
 
     }
+
+    /**
+     * 插入排序、归并排序 比较
+     * 归并排序明显更快
+     */
+    @Test
+    public void test3(){
+        Integer N = 100000;
+        Integer rangeL = -100000;
+        Integer rangeR = 100000;
+        Integer[] random = Tlt.random(N, rangeL, rangeR);
+        Integer[] random2 = Arrays.copyOf(random, random.length);
+        StopWatch sw = new StopWatch();
+        InsertionSort.sort2(random);
+        System.out.println("优化插入排序耗时："+sw.elapsedTime());
+        StopWatch sw2 = new StopWatch();
+        MergeSort.sort(random2);
+        System.out.println("归并排序耗时："+sw2.elapsedTime());
+    }
+
+    /**
+     * 插入排序、归并排序 比较
+     * 在近乎有序的情况下，插入排序更占优势
+     */
+    @Test
+    public void test4(){
+        Integer N = 1000000;
+        Integer[] random = Tlt.nearlyOrderedRandom(N,10);
+        Integer[] random2 = Arrays.copyOf(random, random.length);
+        StopWatch sw = new StopWatch();
+        InsertionSort.sort2(random);
+        System.out.println("优化插入排序耗时："+sw.elapsedTime());
+        StopWatch sw2 = new StopWatch();
+        MergeSort.sort(random2);
+        System.out.println("归并排序耗时："+sw2.elapsedTime());
+    }
+
+    /**
+     * 简单修改后的归并排序性能测试
+     */
+    @Test
+    public void test5(){
+        Integer N = 1000000;
+        Integer[] random = Tlt.nearlyOrderedRandom(N,10);
+        Integer[] random2 = Arrays.copyOf(random, random.length);
+        Integer[] random3 = Arrays.copyOf(random, random.length);
+        StopWatch sw = new StopWatch();
+        InsertionSort.sort2(random);
+        System.out.println("优化的插入排序耗时："+sw.elapsedTime());
+        StopWatch sw2 = new StopWatch();
+        MergeSort.sort(random2);
+        System.out.println("归并排序耗时："+sw2.elapsedTime());
+        StopWatch sw3 = new StopWatch();
+        MergeSortFast.sort(random3);
+        System.out.println("简单优化后的归并排序耗时："+sw3.elapsedTime());
+    }
 }
