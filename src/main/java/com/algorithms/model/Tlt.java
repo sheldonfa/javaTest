@@ -51,6 +51,7 @@ public class Tlt {
         for(int i=0;i<N;i++){
             a[i] = StdRandom.uniform(rangeL,rangeR);
         }
+
         return a;
     }
 }
