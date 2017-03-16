@@ -1,23 +1,24 @@
-package com.algorithmsforimock.practice;
+package com.algorithmsforimock;
 
 import com.algorithms.model.Tlt;
 
 /**
+ * 自底向上的归并排序
  * @author fangxin
- * @description ${END}
- * @date 2017/3/16 0016.
+ * @date 2017/3/16.
  */
-public class Practice1MergeSort {
+public class MergeSortBU {
 
-    private static Integer[] aux;
+    // 辅助数组
+    private static Comparable[] aux;
 
-    public static void merge(Integer[] arr,Integer l,Integer mid,Integer r){
+    public static void merge(Comparable[] arr,int l,int mid,int r){
 
         for(int i=l;i<=r;i++){
             aux[i-l] = arr[i];
         }
 
-        int i = l,j=mid+1;
+        int i = l, j = mid+1;
         for(int k=l;k<=r;k++){
             if(i>mid){
                 arr[k] = aux[j-l];
@@ -35,26 +36,23 @@ public class Practice1MergeSort {
         }
     }
 
-    public static void sort(Integer[] arr){
-        aux = new Integer[arr.length];
-        sort(arr,0,arr.length-1);
-    }
 
-    public static void sort(Integer[] arr,Integer l, Integer r){
-        Integer mid = (l+r)/2;
-        if(l>=r){
-            return;
-        }
-        sort(arr,l,mid);
-        sort(arr,mid+1,r);
-        if(arr[mid]>arr[mid+1]){
-            merge(arr,l,mid,r);
+    public static void sort(Integer[] arr){
+
+        Integer n = arr.length;
+        aux = new Comparable[n];
+        for(int sz=1;sz<=n;sz+=sz){
+            for(int i=0;i+sz<n;i+=sz+sz){
+                merge(arr,i,i+sz-1, Tlt.min(i + sz + sz - 1, n - 1));
+            }
         }
     }
 
     public static void main(String[] args) {
-        Integer[] random = Tlt.random(1000, 0, 1000);
+        Integer[] random = Tlt.random(10000, 0, 10000);
         sort(random);
         Tlt.show(random);
     }
+
+
 }

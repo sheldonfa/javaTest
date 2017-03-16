@@ -66,4 +66,12 @@ public class Tlt {
         }
         return arr;
     }
+
+    public static Integer min(Integer a,Integer b){
+        if(less(a,b)){
+            return a;
+        }else{
+            return b;
+        }
+    }
 }

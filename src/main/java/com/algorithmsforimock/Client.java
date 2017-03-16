@@ -106,4 +106,22 @@ public class Client {
         MergeSortFast.sort(random3);
         System.out.println("简单优化后的归并排序耗时："+sw3.elapsedTime());
     }
+
+    /**
+     * 快速排序、归并排序 比较
+     */
+    @Test
+    public void test6(){
+        Integer n = 1000000;
+        Integer start = 0;
+        Integer end = 1000000;
+        Integer[] random = Tlt.random(n,start,end);
+        Integer[] random2 = Arrays.copyOf(random, random.length);
+        StopWatch sw = new StopWatch();
+        QuickSort.sort(random);
+        System.out.println("快速排序耗时："+sw.elapsedTime());
+        StopWatch sw2 = new StopWatch();
+        MergeSortFast.sort(random2);
+        System.out.println("简单优化后的归并排序耗时："+sw2.elapsedTime());
+    }
 }
