@@ -42,6 +42,9 @@ public class InsertionSort {
         }
     }
 
+    /**
+     * 局部排序
+     */
     public static void sort2(Comparable[] arr,int l,int r){
         for(int i=l+1;i<=r;i++){
             Comparable e = arr[i];
