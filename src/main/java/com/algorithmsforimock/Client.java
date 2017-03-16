@@ -124,4 +124,83 @@ public class Client {
         MergeSortFast.sort(random2);
         System.out.println("简单优化后的归并排序耗时："+sw2.elapsedTime());
     }
+
+    /**
+     * 快速排序，在近乎有序的数组中的表现
+     * 效果差，退化为on^2
+     */
+    @Test
+    public void test7(){
+        Integer n = 200000;
+        Integer[] random = Tlt.nearlyOrderedRandom(n,100);
+        Integer[] random2 = Arrays.copyOf(random, random.length);
+        StopWatch sw = new StopWatch();
+        QuickSort.sort(random);
+        System.out.println("快速排序耗时："+sw.elapsedTime());
+        StopWatch sw2 = new StopWatch();
+        MergeSortFast.sort(random2);
+        System.out.println("简单优化后的归并排序耗时："+sw2.elapsedTime());
+    }
+
+    /**
+     * 优化后的快速排序，在近乎有序的数组中的表现
+     * 效果很好
+     */
+    @Test
+    public void test8(){
+        Integer n = 200000;
+        Integer[] random = Tlt.nearlyOrderedRandom(n,100);
+        Integer[] random2 = Arrays.copyOf(random, random.length);
+        Integer[] random3 = Arrays.copyOf(random, random.length);
+        StopWatch sw = new StopWatch();
+        MergeSortFast.sort(random);
+        System.out.println("简单优化后的归并排序耗时："+sw.elapsedTime());
+        StopWatch sw2 = new StopWatch();
+        QuickSort.sort(random2);
+        System.out.println("快速排序耗时："+sw2.elapsedTime());
+        StopWatch sw3 = new StopWatch();
+        QuickSortFast.sort(random3);
+        System.out.println("优化后的快速排序耗时："+sw3.elapsedTime());
+    }
+
+    /**
+     * 优化后的快速排序，高重复率下的表现
+     */
+    @Test
+    public void test9(){
+        Integer n = 1000000;
+        Integer[] random = Tlt.random(n,0,10);
+        Integer[] random2 = Arrays.copyOf(random, random.length);
+        Integer[] random3 = Arrays.copyOf(random, random.length);
+        StopWatch sw = new StopWatch();
+        MergeSortFast.sort(random);
+        System.out.println("简单优化后的归并排序耗时："+sw.elapsedTime());
+        StopWatch sw2 = new StopWatch();
+        QuickSort.sort(random2);
+        System.out.println("快速排序耗时："+sw2.elapsedTime());
+        StopWatch sw3 = new StopWatch();
+        QuickSortFast.sort(random3);
+        System.out.println("优化后的快速排序耗时："+sw3.elapsedTime());
+    }
+
+    /**
+     * 三路快速排序
+     * 在高重复的数组中表现优异，其他情况也不示弱
+     */
+    @Test
+    public void test10(){
+        Integer n = 1000000;
+        Integer[] random = Tlt.random(n,0,10);
+        Integer[] random2 = Arrays.copyOf(random, random.length);
+        Integer[] random3 = Arrays.copyOf(random, random.length);
+        StopWatch sw = new StopWatch();
+        MergeSortFast.sort(random);
+        System.out.println("简单优化后的归并排序耗时："+sw.elapsedTime());
+        StopWatch sw2 = new StopWatch();
+        QuickSortFast.sort(random2);
+        System.out.println("优化后的快速排序耗时："+sw2.elapsedTime());
+        StopWatch sw3 = new StopWatch();
+        QuickSort3Ways.sort(random3);
+        System.out.println("三路快速排序耗时："+sw3.elapsedTime());
+    }
 }
