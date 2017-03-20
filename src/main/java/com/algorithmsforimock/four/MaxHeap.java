@@ -27,7 +27,7 @@ public class MaxHeap {
         }
         count = n;
 
-        for(int i=count/2;i>=1;i--){
+        for(int i=count/2;i>=1;i--){// Heapify算法。将n个元素逐个插入到一个空堆中，算法复杂度是O(nlogn)；heapify的过程，算法复杂度是O(n)
             shiftDown(i);
         }
     }
