@@ -34,7 +34,7 @@ public class QuickSortFast {
             while(i <=r && arr[i]<v) i++;
             while(j >= l+1 && arr[j]>v) j--;
             if(i>j)break;
-            Tlt.exch(arr,i,j);
+            Tlt.exch(arr,i,j);// 这种情况在arr[i]=v=arr[j]的情况下也会交换。但是好在将等于v的数据在part两部分平分了，阻止退化成on^2。
             i++;
             j--;
         }
