@@ -1,12 +1,13 @@
-package com.algorithmsforimock;
+package com.algorithmsforimock.c3;
 
 import com.algorithms.model.Tlt;
 
 /**
- * 归并排序
- * 特点：NlogN级别的排序。将N分为log以2为底N的对数层，忽略常数即logN层，每层线性排序ON忽略O，总共就是NlogN级别
+ * 自底向上的归并排序
+ * @author fangxin
+ * @date 2017/3/16.
  */
-public class MergeSort {
+public class MergeSortBU {
 
     // 辅助数组
     private static Comparable[] aux;
@@ -35,17 +36,16 @@ public class MergeSort {
         }
     }
 
-    public static void sort(Comparable[] arr){
-        aux = new Comparable[arr.length];
-        sort(arr,0,arr.length-1);
-    }
 
-    public static void sort(Comparable[] arr,int l,int r){
-        if(l>=r) return;
-        int mid = (l+r)/2;
-        sort(arr,l,mid);
-        sort(arr,mid+1,r);
-        merge(arr,l,mid,r);
+    public static void sort(Integer[] arr){
+
+        Integer n = arr.length;
+        aux = new Comparable[n];
+        for(int sz=1;sz<=n;sz+=sz){
+            for(int i=0;i+sz<n;i+=sz+sz){
+                merge(arr,i,i+sz-1, Tlt.min(i + sz + sz - 1, n - 1));
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -53,4 +53,6 @@ public class MergeSort {
         sort(random);
         Tlt.show(random);
     }
+
+
 }

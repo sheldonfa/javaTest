@@ -1,7 +1,6 @@
-package com.algorithmsforimock;
+package com.algorithmsforimock.c3;
 
 import com.algorithms.model.Tlt;
-import com.algorithms.sort.*;
 
 /**
  * 归并排序优化
@@ -43,7 +42,7 @@ public class MergeSortFast {
     public static void sort(Comparable[] arr,int l,int r){
         // 当l-r的值很小时，改用插入排序更有优势
         if(r-l<=15){
-            InsertionSort.sort2(arr,l,r);
+            com.algorithmsforimock.c3.InsertionSort.sort2(arr,l,r);
             return;
         }
         int mid = (l+r)/2;

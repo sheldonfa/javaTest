@@ -1,4 +1,4 @@
-package com.algorithmsforimock;
+package com.algorithmsforimock.c3;
 
 import com.algorithms.model.Tlt;
 

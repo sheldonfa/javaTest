@@ -1,4 +1,4 @@
-package com.algorithmsforimock.four;
+package com.algorithmsforimock.c4;
 
 import com.algorithms.model.StdRandom;
 import com.algorithms.model.Tlt;

@@ -1,8 +1,8 @@
-package com.algorithmsforimock;
+package com.algorithmsforimock.c3;
 
 import com.algorithms.model.StopWatch;
 import com.algorithms.model.Tlt;
-import com.algorithmsforimock.four.HeapSort;
+import com.algorithmsforimock.c4.HeapSort;
 import org.junit.Test;
 
 import java.util.Arrays;
