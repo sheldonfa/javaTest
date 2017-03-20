@@ -265,4 +265,77 @@ public class Client {
         HeapSort.sort(random444);
         System.out.println("堆排序耗时："+sw444.elapsedTime());
     }
+
+    /**
+     * 堆排序 测试
+     */
+    @Test
+    public void test12(){
+        Integer n = 1000000;
+        Integer[] random = Tlt.random(n,0,1000000);
+        Integer[] random2 = Arrays.copyOf(random, random.length);
+        Integer[] random3 = Arrays.copyOf(random, random.length);
+        Integer[] random4 = Arrays.copyOf(random, random.length);
+        Integer[] random5 = Arrays.copyOf(random, random.length);
+        System.out.println("=========普通随机数排序=============");
+        StopWatch sw = new StopWatch();
+        MergeSortFast.sort(random);
+        System.out.println("简单优化后的归并排序耗时："+sw.elapsedTime());
+        StopWatch sw2 = new StopWatch();
+        QuickSortFast.sort(random2);
+        System.out.println("优化后的快速排序耗时："+sw2.elapsedTime());
+        StopWatch sw3 = new StopWatch();
+        QuickSort3Ways.sort(random3);
+        System.out.println("三路快速排序耗时："+sw3.elapsedTime());
+        StopWatch sw4 = new StopWatch();
+        HeapSort.sort(random4);
+        System.out.println("堆排序耗时："+sw4.elapsedTime());
+        StopWatch sw5 = new StopWatch();
+        HeapSort.sort2(random5);
+        System.out.println("优化的堆排序耗时："+sw5.elapsedTime());
+
+        Integer[] random11 = Tlt.nearlyOrderedRandom(n,100);
+        Integer[] random22 = Arrays.copyOf(random, random.length);
+        Integer[] random33 = Arrays.copyOf(random, random.length);
+        Integer[] random44 = Arrays.copyOf(random, random.length);
+        Integer[] random55 = Arrays.copyOf(random, random.length);
+        System.out.println("=========近乎有序的数组排序=============");
+        StopWatch sw11 = new StopWatch();
+        MergeSortFast.sort(random11);
+        System.out.println("简单优化后的归并排序耗时："+sw11.elapsedTime());
+        StopWatch sw22 = new StopWatch();
+        QuickSortFast.sort(random22);
+        System.out.println("优化后的快速排序耗时："+sw22.elapsedTime());
+        StopWatch sw33 = new StopWatch();
+        QuickSort3Ways.sort(random33);
+        System.out.println("三路快速排序耗时："+sw33.elapsedTime());
+        StopWatch sw44 = new StopWatch();
+        HeapSort.sort(random44);
+        System.out.println("堆排序耗时："+sw44.elapsedTime());
+        StopWatch sw55 = new StopWatch();
+        HeapSort.sort2(random55);
+        System.out.println("优化的堆排序耗时："+sw55.elapsedTime());
+
+        Integer[] random111 = Tlt.random(n,0,100);
+        Integer[] random222 = Arrays.copyOf(random, random.length);
+        Integer[] random333 = Arrays.copyOf(random, random.length);
+        Integer[] random444 = Arrays.copyOf(random, random.length);
+        Integer[] random555 = Arrays.copyOf(random, random.length);
+        System.out.println("=========大量重复的数组排序=============");
+        StopWatch sw111 = new StopWatch();
+        MergeSortFast.sort(random111);
+        System.out.println("简单优化后的归并排序耗时："+sw111.elapsedTime());
+        StopWatch sw222 = new StopWatch();
+        QuickSortFast.sort(random222);
+        System.out.println("优化后的快速排序耗时："+sw222.elapsedTime());
+        StopWatch sw333 = new StopWatch();
+        QuickSort3Ways.sort(random333);
+        System.out.println("三路快速排序耗时："+sw333.elapsedTime());
+        StopWatch sw444 = new StopWatch();
+        HeapSort.sort(random444);
+        System.out.println("堆排序耗时："+sw444.elapsedTime());
+        StopWatch sw555 = new StopWatch();
+        HeapSort.sort2(random555);
+        System.out.println("优化的堆排序耗时："+sw555.elapsedTime());
+    }
 }

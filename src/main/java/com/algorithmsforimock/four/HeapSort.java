@@ -17,6 +17,14 @@ public class HeapSort {
         }
     }
 
+    public static void sort2(Integer[] arr){
+        Integer n = arr.length;
+        MaxHeap maxHeap = new MaxHeap(arr,n);
+        for(int i=n-1;i>=0;i--){
+            arr[i] = maxHeap.extractMax();
+        }
+    }
+
     public static void main(String[] args) {
 
     }

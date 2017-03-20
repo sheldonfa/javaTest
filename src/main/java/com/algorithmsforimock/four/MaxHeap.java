@@ -18,6 +18,20 @@ public class MaxHeap {
         this.capacity = capacity;
     }
 
+    // 新的构造函数
+    public MaxHeap(Integer[] arr, int n) {
+        this.data = new Integer[n+1];
+        this.capacity = n;
+        for(int i=0;i<n;i++){
+            data[i+1] = arr[i];
+        }
+        count = n;
+
+        for(int i=count/2;i>=1;i--){
+            shiftDown(i);
+        }
+    }
+
     int size(){
         return count;
     }
@@ -33,13 +47,6 @@ public class MaxHeap {
         shiftUp(data,count);
     }
 
-    private void shiftUp(Integer[] data,int k) {
-        while(k>1 && data[k/2] <data[k]){
-            Tlt.exch(data,k/2,k);
-            k/=2;
-        }
-    }
-
     public int extractMax(){
         assert (count>0);
         Integer ret = data[1];
@@ -47,6 +54,13 @@ public class MaxHeap {
         count--;
         shiftDown(1);
         return ret;
+    }
+
+    private void shiftUp(Integer[] data,int k) {
+        while(k>1 && data[k/2] <data[k]){
+            Tlt.exch(data,k/2,k);
+            k/=2;
+        }
     }
 
     private void shiftDown(int k) {
