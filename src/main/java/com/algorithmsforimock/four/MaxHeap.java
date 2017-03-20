@@ -64,8 +64,8 @@ public class MaxHeap {
     }
 
     private void shiftDown(int k) {
-        while(2*k<=count){
-            int j = 2*k;
+        while(2*k<=count){// 保证有子节点
+            int j = 2*k; // 此轮循环中，data[k]和data[j]交换
             if(j+1 <= count && data[j+1]>data[j]){
                 j +=1;
             }
