@@ -44,7 +44,7 @@ public class MaxHeap {
         assert(count+1<=capacity);
         data[count+1] = item;
         count++;
-        shiftUp(data,count);
+        shiftUp(count);
     }
 
     public int extractMax(){
@@ -56,7 +56,7 @@ public class MaxHeap {
         return ret;
     }
 
-    private void shiftUp(Integer[] data,int k) {
+    private void shiftUp(int k) {
         while(k>1 && data[k/2] <data[k]){
             Tlt.exch(data,k/2,k);
             k/=2;
