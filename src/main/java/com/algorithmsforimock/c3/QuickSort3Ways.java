@@ -18,7 +18,6 @@ public class QuickSort3Ways {
             InsertionSort.sort2(arr,l,r);
             return;
         }
-        // partition
         Tlt.exch(arr,l,StdRandom.uniform(l, r));
         Integer v = arr[l];
 
