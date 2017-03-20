@@ -1,8 +1,10 @@
-package com.algorithmsforimock.c3;
+package com.algorithmsforimock;
 
 import com.algorithms.model.StopWatch;
 import com.algorithms.model.Tlt;
+import com.algorithmsforimock.c3.*;
 import com.algorithmsforimock.c4.HeapSort;
+import com.algorithmsforimock.c4.HeapSort2;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -338,4 +340,28 @@ public class Client {
         HeapSort.sort2(random555);
         System.out.println("优化的堆排序耗时："+sw555.elapsedTime());
     }
+
+    /**
+     * 原地堆排序测试
+     */
+    @Test
+    public void test13(){
+        Integer n = 10000;
+        Integer[] random = Tlt.random(n,0,1000000);
+        Integer[] random2 = Arrays.copyOf(random, random.length);
+        Integer[] random3 = Arrays.copyOf(random, random.length);
+        StopWatch sw = new StopWatch();
+        HeapSort.sort(random);
+        Tlt.show(random);
+        System.out.println("堆排序耗时："+sw.elapsedTime());
+        StopWatch sw2 = new StopWatch();
+        HeapSort.sort2(random2);
+        Tlt.show(random2);
+        System.out.println("优化的堆排序耗时："+sw2.elapsedTime());
+        StopWatch sw3 = new StopWatch();
+        HeapSort2.sort(random3);
+        Tlt.show(random3);
+        System.out.println("原地堆排序耗时："+sw3.elapsedTime());
+    }
+
 }
