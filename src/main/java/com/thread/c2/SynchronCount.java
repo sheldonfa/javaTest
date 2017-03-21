@@ -1,4 +1,4 @@
-package com.thread.page1;
+package com.thread.c2;
 
 /**
  * Created by Administrator on 2016/11/27.
