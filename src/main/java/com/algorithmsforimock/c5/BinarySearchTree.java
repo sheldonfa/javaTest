@@ -23,6 +23,13 @@ public class BinarySearchTree {
             this.left = null;
             this.right = null;
         }
+
+        public Node(Node node){
+            this.key = node.key;
+            this.value = node.value;
+            this.left = node.left;
+            this.right = node.right;
+        }
     }
 
     private Node root;
@@ -197,5 +204,40 @@ public class BinarySearchTree {
         }
         node.right = removeMax(node.right);
         return node;
+    }
+
+    // 从二叉树中删除键值为key的节点
+    void remove(int key){
+        root = remove(root,key);
+    }
+    // 删除掉以node为根的二叉搜索树中键值为key的节点
+    // 返回删除节点后新的二叉搜索树的根
+    Node remove(Node node, int key){
+        if(node == null){
+            return null;
+        }
+        if(key < node.key){
+            node.left = remove(node.left, key);
+            return node;
+        }else if(key > node.key){
+            node.right = remove(node.right, key);
+            return node;
+        }else{
+            if(node.left==null){
+                count--;
+                return node.right;
+            }
+            if(node.right==null){
+                count--;
+                return node.left;
+            }
+            Node delNode = node;
+            Node successor = new Node(minimum(node.right));
+            count++;
+            successor.right = removeMin(node.right);
+            successor.left = node.left;
+            count--;
+            return successor;
+        }
     }
 }
