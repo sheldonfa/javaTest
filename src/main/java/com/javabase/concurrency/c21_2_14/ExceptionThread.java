@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/ExceptionThread.java
+package com.javabase.concurrency.c21_2_14;//: concurrency/ExceptionThread.java
 // {ThrowsException}
 import java.util.concurrent.*;
 

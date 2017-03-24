@@ -1,6 +1,8 @@
-package com.javabase.concurrency;//: concurrency/CaptureUncaughtException.java
+package com.javabase.concurrency.c21_2_14;
+
 import java.util.concurrent.*;
 
+/*抛出异常的线程*/
 class ExceptionThread2 implements Runnable {
   public void run() {
     Thread t = Thread.currentThread();
@@ -18,6 +20,7 @@ Thread.UncaughtExceptionHandler {
   }
 }
 
+/*新的线程工厂实现类，捕获线程的异常*/
 class HandlerThreadFactory implements ThreadFactory {
   public Thread newThread(Runnable r) {
     System.out.println(this + " creating new Thread");
