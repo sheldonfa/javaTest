@@ -1,7 +1,8 @@
-package com.javabase.concurrency;//: concurrency/SerialNumberChecker.java
+package com.javabase.concurrency.c21_3_3;//: concurrency/SerialNumberChecker.java
 // Operations that may seem safe are not,
 // when threads are present.
 // {Args: 4}
+
 import java.util.concurrent.*;
 
 // Reuses storage so we don't run out of memory:
@@ -37,6 +38,12 @@ public class SerialNumberChecker {
     Executors.newCachedThreadPool();
   static class SerialChecker implements Runnable {
     public void run() {
+      /*
+       * 虽然volatile取消了缓存，但是nextSerialNumber()不是原子性操作，依然有问题
+       * Brian的同步规则:
+       * 如果你正在写一个变量，他可能接下来将被另一个线程读取，或者正在读取一个上一次已经被另一个线程写过的变量，那么必须使用同步，
+       * 并且，读写线程都必须用相同的监视器锁同步。
+       */
       while(true) {
         int serial =
           SerialNumberGenerator.nextSerialNumber();
