@@ -12,6 +12,5 @@ public class Client {
     public static void main(String[] args) {
         List<Integer> list = new LinkedList<Integer>();
         Map m = new HashMap();
-        list.
     }
 }
