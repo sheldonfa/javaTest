@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/ThreadLocalVariableHolder.java
+package com.javabase.concurrency.c21_3_7;//: concurrency/ThreadLocalVariableHolder.java
 // Automatically giving each thread its own storage.
 import java.util.concurrent.*;
 import java.util.*;
@@ -20,6 +20,7 @@ class Accessor implements Runnable {
 }
 
 public class ThreadLocalVariableHolder {
+  /*ThreadLocal对象通常当做静态域存储*/
   private static ThreadLocal<Integer> value =
     new ThreadLocal<Integer>() {
       private Random rand = new Random(47);
