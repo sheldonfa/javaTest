@@ -1,22 +1,22 @@
-package com.javabase.concurrency;
+package com.javabase.concurrency;//: concurrency/LiftOff.java
+// Demonstration of the Runnable interface.
 
-/**
- * @author fangxin
- * @description ${END}
- * @date 2017/3/23 0023.
- */
 public class LiftOff implements Runnable {
-
-    private static int threadNu = 0;
-    private final int id = ++threadNu;
-    private int count = 10;
-
-    @Override
-    public void run() {
-        while(count>0){
-            System.out.print("#"+id+"("+count+")");
-            count--;
-        }
-        System.out.println("liftOff!!");
+  protected int countDown = 10; // Default
+  private static int taskCount = 0;
+  private final int id = taskCount++;
+  public LiftOff() {}
+  public LiftOff(int countDown) {
+    this.countDown = countDown;
+  }
+  public String status() {
+    return "#" + id + "(" +
+      (countDown > 0 ? countDown : "Liftoff!") + "), ";
+  }
+  public void run() {
+    while(countDown-- > 0) {
+      System.out.print(status());
+      Thread.yield();
     }
-}
+  }
+} ///:~
