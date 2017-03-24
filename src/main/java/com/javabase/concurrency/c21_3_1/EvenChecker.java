@@ -1,4 +1,5 @@
-package com.javabase.concurrency;//: concurrency/EvenChecker.java
+package com.javabase.concurrency.c21_3_1;//: concurrency/EvenChecker.java
+
 import java.util.concurrent.*;
 
 public class EvenChecker implements Runnable {

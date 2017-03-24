@@ -1,6 +1,9 @@
 package com.javabase.concurrency;//: concurrency/MutexEvenGenerator.java
 // Preventing thread collisions with mutexes.
 // {RunByHand}
+import com.javabase.concurrency.c21_3_1.EvenChecker;
+import com.javabase.concurrency.c21_3_1.IntGenerator;
+
 import java.util.concurrent.locks.*;
 
 public class MutexEvenGenerator extends IntGenerator {

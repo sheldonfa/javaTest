@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/EvenGenerator.java
+package com.javabase.concurrency.c21_3_1;//: concurrency/EvenGenerator.java
 // When threads collide.
 
 public class EvenGenerator extends IntGenerator {
