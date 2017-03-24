@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/MutexEvenGenerator.java
+package com.javabase.concurrency.c21_3_2;//: concurrency/MutexEvenGenerator.java
 // Preventing thread collisions with mutexes.
 // {RunByHand}
 import com.javabase.concurrency.c21_3_1.EvenChecker;

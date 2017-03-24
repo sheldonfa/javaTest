@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/SynchronizedEvenGenerator.java
+package com.javabase.concurrency.c21_3_2;//: concurrency/SynchronizedEvenGenerator.java
 // Simplifying mutexes with the synchronized keyword.
 // {RunByHand}
 

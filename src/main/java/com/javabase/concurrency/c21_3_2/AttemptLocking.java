@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/AttemptLocking.java
+package com.javabase.concurrency.c21_3_2;//: concurrency/AttemptLocking.java
 // Locks in the concurrent library allow you
 // to give up on trying to acquire a lock.
 import java.util.concurrent.*;
