@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/SyncObject.java
+package com.javabase.concurrency.c21_3_6;//: concurrency/SyncObject.java
 // Synchronizing on another object.
 import static net.mindview.util.Print.*;
 
@@ -20,6 +20,7 @@ class DualSynch {
   }
 }
 
+/*DualSynch两个同步内容，一个同步方法自己锁，一个同步块用SyncObejct锁，那么会阻塞吗？*/
 public class SyncObject {
   public static void main(String[] args) {
     final DualSynch ds = new DualSynch();

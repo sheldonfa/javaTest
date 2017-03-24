@@ -1,6 +1,7 @@
 //: concurrency/ExplicitCriticalSection.java
 // Using explicit Lock objects to create critical sections.
-package com.javabase.concurrency;
+package com.javabase.concurrency.c21_3_5;
+
 import java.util.concurrent.locks.*;
 
 // Synchronize the entire method:
