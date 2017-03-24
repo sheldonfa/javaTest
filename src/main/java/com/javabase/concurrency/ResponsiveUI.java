@@ -2,6 +2,8 @@ package com.javabase.concurrency;//: concurrency/ResponsiveUI.java
 // User interface responsiveness.
 // {RunByHand}
 
+import net.mindview.util.Print;
+
 class UnresponsiveUI {
   private volatile double d = 1;
   public UnresponsiveUI() throws Exception {
@@ -11,6 +13,7 @@ class UnresponsiveUI {
   }
 }
 
+/*如果打开26行注释，将不断打印，知道main方法运行结束*/
 public class ResponsiveUI extends Thread {
   private static volatile double d = 1;
   public ResponsiveUI() {
@@ -20,6 +23,7 @@ public class ResponsiveUI extends Thread {
   public void run() {
     while(true) {
       d = d + (Math.PI + Math.E) / d;
+      /*System.out.println(d);*/
     }
   }
   public static void main(String[] args) throws Exception {
