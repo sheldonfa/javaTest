@@ -1,5 +1,8 @@
 package com.algorithmsforimock.c6;
 
+import com.algorithms.model.StdIn;
+import com.algorithms.model.StdOut;
+
 /**
  * 并查集
  *
@@ -42,5 +45,24 @@ public class UnionFind {
                 id[i]=qId;
             }
         }
+    }
+
+    public int count(){
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int N = StdIn.readInt();
+        UnionFind uf = new UnionFind(N);
+        while(!StdIn.isEmpty()){
+            int p = StdIn.readInt();
+            int q = StdIn.readInt();
+            if(uf.isConnected(p,q)){
+                continue;
+            }
+            uf.union(p,q);
+            StdOut.println(StdIn.isEmpty());
+        }
+        StdOut.println(uf.count()+"components");
     }
 }
