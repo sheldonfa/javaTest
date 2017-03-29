@@ -105,10 +105,10 @@ public class Client {
         String str = "hello world";
         char[] ch = new char[]{'h','e','l','l','o',' ','w','o','r','l','d'};
         CharArray charArray = new CharArray(ch, 0, ch.length, false);
-        boolean equals1 = str.equals(charArray);
-        boolean contains = str.contentEquals(charArray);
-        System.out.println(equals1);
-        System.out.println(contains);
+        boolean res1 = str.equals(charArray);
+        boolean res2 = str.contentEquals(charArray);
+        System.out.println(res1);
+        System.out.println(res2);
     }
 
     /**
@@ -290,7 +290,7 @@ public class Client {
      * split
      * s1表示以空格分隔
      * s2表示以非单词字符分隔。+加号表示一个或多个
-     * s3表示以d后面的非单词字符分隔
+     * s3表示以d和后面的非单词字符分隔
      */
     @Test
     public void test22(){
@@ -298,9 +298,18 @@ public class Client {
         String[] s1 = str.split(" ");
         String[] s2 = str.split("\\W+");
         String[] s3 = str.split("d\\W+");
-        for(String s:s3){
-            System.out.println(s);
+        for(String s:s1){
+            System.out.print(s+" ");
         }
+        System.out.println();
+        for(String s:s2){
+            System.out.print(s+" ");
+        }
+        System.out.println();
+        for(String s:s3){
+            System.out.print(s+" ");
+        }
+        System.out.println();
     }
 
     /**
@@ -390,5 +399,14 @@ public class Client {
         System.out.println("你的年龄");
         String age = scanner.next();
         System.out.println(age);
+    }
+
+
+    @Test
+    public void test30(){
+        String s = "aaabdcef";
+        StringBuffer sb = new StringBuffer(s);
+        StringBuffer reverse = sb.reverse();
+        System.out.println(reverse.toString());
     }
 }

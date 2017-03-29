@@ -181,7 +181,7 @@ public class QuickUnionUF {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-   String tinyUF = "http://algs4.cs.princeton.edu/15uf/tinyUF.txt";
+        String tinyUF = "http://algs4.cs.princeton.edu/15uf/tinyUF.txt";
         String mediumUF = "http://algs4.cs.princeton.edu/15uf/mediumUF.txt";
         String largeUF = "http://algs4.cs.princeton.edu/15uf/largeUF.txt";
         int[] info = In.readInts(mediumUF);
