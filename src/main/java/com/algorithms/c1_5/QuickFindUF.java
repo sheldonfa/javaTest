@@ -185,7 +185,7 @@ public class QuickFindUF {
         String tinyUF = "http://algs4.cs.princeton.edu/15uf/tinyUF.txt";
         String mediumUF = "http://algs4.cs.princeton.edu/15uf/mediumUF.txt";
         String largeUF = "http://algs4.cs.princeton.edu/15uf/largeUF.txt";
-        int[] info = In.readInts(largeUF);
+        int[] info = In.readInts(mediumUF);
         int[] arr = Arrays.copyOfRange(info, 1, info.length);
         int n = info[0]; // 触点数
         QuickFindUF uf = new QuickFindUF(n);

@@ -16,8 +16,11 @@ package com.algorithms.c1_5;
  *
  ******************************************************************************/
 
+import com.algorithms.model.In;
 import com.algorithms.model.StdIn;
 import com.algorithms.model.StdOut;
+
+import java.util.Arrays;
 
 /**
  *  The {@code QuickUnionUF} class represents a <em>union–find data type</em>
@@ -178,11 +181,16 @@ public class QuickUnionUF {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        int n = StdIn.readInt();
+   String tinyUF = "http://algs4.cs.princeton.edu/15uf/tinyUF.txt";
+        String mediumUF = "http://algs4.cs.princeton.edu/15uf/mediumUF.txt";
+        String largeUF = "http://algs4.cs.princeton.edu/15uf/largeUF.txt";
+        int[] info = In.readInts(mediumUF);
+        int[] arr = Arrays.copyOfRange(info, 1, info.length);
+        int n = info[0]; // 触点数
         QuickUnionUF uf = new QuickUnionUF(n);
-        while (!StdIn.isEmpty()) {
-            int p = StdIn.readInt();
-            int q = StdIn.readInt();
+        for(int i=0;i<arr.length;i+=2){
+            int p = arr[i];
+            int q = arr[i+1];
             if (uf.connected(p, q)) continue;
             uf.union(p, q);
             StdOut.println(p + " " + q);
