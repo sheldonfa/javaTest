@@ -1,5 +1,6 @@
 package com.mybatis.test;
 
+import com.mybatis.mapper.UserMapper;
 import com.demo.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -31,10 +32,23 @@ public class MapperTest {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         //3、SqlSessionFactory创建SqlSession
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        //4、SqlSession执行statement，并返回映射结果
-        //第一个参数：statement的id，建议：namespace.statementId（确保唯一）
-        //第二个参数：入参的值，它的类型要和映射文件中对应的statement的入参类型一致
-        User user = sqlSession.selectOne("findUserById", 1);
+        /**
+         * 4a、SqlSession执行statement，并返回映射结果
+         *
+         * 参数1：statement的id
+         * 参数2：入参
+         * 注意：此时映射文件的namespace不重要，config.xml中是否配置了映射文件很重要
+         */
+//        User user = sqlSession.selectOne("findUserById", 1);
+        /**
+         * 4b、通过mapper更能看到本质
+         * 注意：此时映射文件的namespace很重要，config.xml中是否配置了映射文件也重要
+         */
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        User user = mapper.findUserById(1);
+        /**
+         * 由此可见，最保险的做法，就是namespace不要自定义，就用接口的全限定名称
+         */
 
 
         //打印输出结果集
@@ -42,6 +56,11 @@ public class MapperTest {
 
         //5、关闭SqlSession
         sqlSession.close();
+    }
+
+    @Test
+    public void test2(){
+
     }
 
 }
