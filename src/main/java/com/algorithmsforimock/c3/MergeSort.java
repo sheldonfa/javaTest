@@ -4,7 +4,7 @@ import com.algorithms.model.Tlt;
 
 /**
  * 归并排序
- * 特点：NlogN级别的排序。将N分为log以2为底N的对数层，忽略常数即logN层，每层线性排序ON忽略O，总共就是NlogN级别
+ * 特点：NlogN级别的排序。
  */
 public class MergeSort {
 

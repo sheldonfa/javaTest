@@ -21,4 +21,6 @@ public interface UserMapper {
     List<Map<String,Object>> testMap1();
 
     Map<String,User> testMap2();
+
+    User testParameterMap(int i);
 }

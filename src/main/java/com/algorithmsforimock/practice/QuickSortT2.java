@@ -1,5 +1,6 @@
 package com.algorithmsforimock.practice;
 
+import com.algorithms.model.StdRandom;
 import com.algorithms.model.Tlt;
 
 /**
@@ -13,7 +14,8 @@ public class QuickSortT2 {
     public static int partition(Integer[] arr, int l,int r){
         // j记录小于标准值的坐标
         int j = l;
-        // 标准值
+        // 标准值，选择第一个并不好
+        Tlt.exch(arr,l,StdRandom.uniform(l, r));
         int v = arr[l];
         for(int i=l+1;i<=r;i++){
             //
