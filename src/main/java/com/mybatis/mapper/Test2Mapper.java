@@ -13,4 +13,9 @@ public interface Test2Mapper {
 
 
     User testParameterMap(Map map);
+
+    void testTrim(User user);
+
+    List<User> testChooseWhen(User user);
+
 }

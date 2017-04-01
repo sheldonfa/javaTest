@@ -3,18 +3,37 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mybatis.mapper.Test2Mapper">
-    <!-- 根据用户ID，查询用户信息 -->
-    <!--
-        [id]：statement的id，要求在命名空间内唯一
-        [parameterType]：入参的java类型
-        [resultType]：查询出的单条结果集对应的java类型
-        [#{}]： 表示一个占位符?
-        [#{id}]：表示该占位符待接收参数的名称为id。注意：如果参数为简单类型时，#{}里面的参数名称可以是任意定义
-     -->
-    <select id="findUserById" parameterType="int" resultType="com.demo.pojo.User">
+    <!--parameterMap-->
+    <parameterMap id="pm1" type="map">
+        <parameter property="id" ></parameter>
+    </parameterMap>
+    
+    <select id="testParameterMap" parameterType="int" resultType="com.mybatis.pojo.User">
         SELECT * FROM USER WHERE id = #{id}
     </select>
 
+    <update id="testTrim" parameterType="com.mybatis.pojo.User">
+        update user
+        <set>
+            <if test="cash!=null and cash!=''">cash= #{cash},</if>
+            <if test="address!=null and address!=''">address= #{address},</if>
+        </set>
+        <where>id = #{id}</where>
+    </update>
 
-
+    <select id="testChooseWhen" resultType="com.mybatis.pojo.User">
+        SELECT * FROM user
+        <where>
+            <choose>
+                <when test="id !=null ">
+                    and id = #{id}
+                </when >
+                <when test="address!=null">
+                    and address = #{address}
+                </when>
+                <otherwise>
+                </otherwise>
+            </choose>
+        </where>
+    </select>
 </mapper>
