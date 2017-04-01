@@ -33,12 +33,17 @@ public class QuickSort {
         array[i] = v;
         return i;
     }
+
+    // 快速排序
     static void quickSort(int[] array,int low,int high){
         if(low >= high ){
             return;
         }
+        // 快速排序的核心是partition
         int p = partition(array, low, high);
+        // 左侧继续快速排序
         quickSort(array,low,p-1);
+        // 右侧继续快速排序
         quickSort(array,p+1,high);
     }
     static void sort(int[] array){

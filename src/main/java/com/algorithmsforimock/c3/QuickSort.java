@@ -37,7 +37,8 @@ public class QuickSort {
 
     public static void main(String[] args) {
         Integer[] random = Tlt.random(100000, 0, 100000);
-        sort(random);
-        Tlt.show(random);
+        Integer[] arr = new Integer[]{25,84,21,47,15,27,68,35,20};
+        sort(arr);
+        Tlt.show(arr);
     }
 }
