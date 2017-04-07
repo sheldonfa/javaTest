@@ -1,5 +1,5 @@
 //: typeinfo/pets/Individual.java
-package com.javabase.typeinfo.typeinfo.pets;
+package com.javabase.typeinfo.c14_3_类型转换前先做检查.pets;
 
 public class Individual implements Comparable<Individual> {
   private static long counter = 0;

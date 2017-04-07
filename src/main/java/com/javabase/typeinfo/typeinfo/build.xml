@@ -296,7 +296,7 @@
     <java
      classname="typeinfo.pets.LiteralPetCreator"
      classpath="${java.class.path};${basedir};${basedir}/.."
-     dir="../typeinfo/pets/"
+     dir="../c14_3_类型转换前先做检查/pets/"
      failonerror="true"
      fork="true"/>
   </target>
