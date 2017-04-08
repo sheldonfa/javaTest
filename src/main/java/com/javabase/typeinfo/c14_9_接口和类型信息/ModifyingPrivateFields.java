@@ -1,4 +1,4 @@
-package com.javabase.typeinfo.typeinfo;//: typeinfo/ModifyingPrivateFields.java
+package com.javabase.typeinfo.c14_9_接口和类型信息;//: typeinfo/ModifyingPrivateFields.java
 import java.lang.reflect.*;
 
 class WithPrivateFinalField {

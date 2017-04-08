@@ -1,4 +1,4 @@
-package com.javabase.typeinfo.typeinfo;//: typeinfo/SimpleProxyDemo.java
+package com.javabase.typeinfo.c14_7_动态代理;//: typeinfo/SimpleProxyDemo.java
 import static net.mindview.util.Print.*;
 
 interface Interface {

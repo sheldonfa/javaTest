@@ -1,7 +1,11 @@
-package com.javabase.typeinfo.typeinfo;//: typeinfo/NullRobot.java
+package com.javabase.typeinfo.c14_8_空对象;//: typeinfo/NullRobot.java
 // Using a dynamic proxy to create a Null Object.
 import java.lang.reflect.*;
 import java.util.*;
+
+import com.javabase.typeinfo.typeinfo.Operation;
+import com.javabase.typeinfo.typeinfo.Robot;
+import com.javabase.typeinfo.typeinfo.SnowRemovalRobot;
 import net.mindview.util.*;
 
 class NullRobotProxyHandler implements InvocationHandler {

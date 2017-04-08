@@ -1,4 +1,5 @@
-package com.javabase.typeinfo.typeinfo;//: typeinfo/SimpleDynamicProxy.java
+package com.javabase.typeinfo.c14_7_动态代理;//: typeinfo/SimpleDynamicProxy.java
+
 import java.lang.reflect.*;
 
 class DynamicProxyHandler implements InvocationHandler {

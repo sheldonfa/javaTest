@@ -1,4 +1,4 @@
-package com.javabase.typeinfo.typeinfo;//: typeinfo/ShowMethods.java
+package com.javabase.typeinfo.c14_6_反射;//: typeinfo/ShowMethods.java
 // Using reflection to show all the methods of a class,
 // even if the methods are defined in the base class.
 // {Args: ShowMethods}
