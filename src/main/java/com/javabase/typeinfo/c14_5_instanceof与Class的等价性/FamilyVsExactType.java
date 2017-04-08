@@ -1,6 +1,6 @@
 //: typeinfo/FamilyVsExactType.java
 // The difference between instanceof and class
-package com.javabase.typeinfo.typeinfo;
+package com.javabase.typeinfo.c14_5_instanceof与Class的等价性;
 import static net.mindview.util.Print.*;
 
 class Base {}

@@ -11,10 +11,17 @@ import static net.mindview.util.Print.*;
 public class PetCount3 {
   static class PetCounter
   extends LinkedHashMap<Class<? extends Pet>,Integer> {
+    /**
+     * PetCounter预加载了所有的Pet类，这种做法不够通用
+     */
     public PetCounter() {
       super(MapData.map(LiteralPetCreator.allTypes, 0));
     }
+
     public void count(Pet pet) {
+      /**
+       * 遍历所有类型，如果目标实例时该类型的实例，加1
+       */
       // Class.isInstance() eliminates instanceofs:
       for(Map.Entry<Class<? extends Pet>,Integer> pair
           : entrySet())
