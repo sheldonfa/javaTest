@@ -40,7 +40,7 @@ public class Client {
      */
     @Test
     public void test2(){
-        Integer N = 100000;
+        Integer N = 10000;
         Integer rangeL = -100000;
         Integer rangeR = 100000;
         Integer[] random = Tlt.random(N, rangeL, rangeR);

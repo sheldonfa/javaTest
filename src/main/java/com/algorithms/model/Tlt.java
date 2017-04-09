@@ -3,6 +3,8 @@ package com.algorithms.model;
 import com.algorithms.sort.InsertionSort;
 import com.algorithms.sort.SelectionSort;
 
+import java.util.Arrays;
+
 /**
  * @author fangxin
  * @date 2017/3/14.
@@ -73,5 +75,9 @@ public class Tlt {
         }else{
             return b;
         }
+    }
+
+    public static Integer[] copy(Integer[] arr){
+        return Arrays.copyOf(arr, arr.length);
     }
 }
