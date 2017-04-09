@@ -18,6 +18,7 @@ public class InsertionSort {
             for(int j=i;j>0;j--){
                 if(Tlt.less(arr[j],arr[j-1])){
                     Tlt.exch(arr,j,j-1);
+                // 提前终止循环
                 }else{
                     break;
                 }
