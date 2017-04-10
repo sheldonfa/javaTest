@@ -68,7 +68,7 @@ public class Client {
      */
     @Test
     public void test2d(){
-        Integer[] random = Tlt.random(10000, 0,10000);
+        Integer[] random = Tlt.random(50000, 0,10000);
         Integer[] random2 = Tlt.copy(random);
         Integer[] random3 = Tlt.copy(random);
         testSelectSort(random);
@@ -212,7 +212,7 @@ public class Client {
      */
     @Test
     public void test9(){
-        Integer[] random = Tlt.random(100000,0,5);
+        Integer[] random = Tlt.random(10000,0,5);
         Integer[] random2 = Tlt.copy(random);
         Integer[] random3 = Tlt.copy(random);
         Integer[] random4 = Tlt.copy(random);
@@ -222,6 +222,9 @@ public class Client {
         testQuickSortFast(random4);
     }
 
+    /**
+     * 三路快排
+     */
     @Test
     public void test4d(){
         Integer[] random = Tlt.random(10, 0, 10);
