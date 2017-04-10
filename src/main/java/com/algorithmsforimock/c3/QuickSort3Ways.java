@@ -20,10 +20,8 @@ public class QuickSort3Ways {
         }
         Tlt.exch(arr,l,StdRandom.uniform(l, r));
         Integer v = arr[l];
-
-        int lt= l;      // arr[l+1...lt] < v
-        int gt = r+1;   // arr[gt...r] > v
-        int i = l+1;    // arr[lt+1...i] == v
+        // arr[l+1...lt] < v    arr[gt...r] > v   // arr[lt+1...i] == v
+        int lt= l,gt = r+1,i = l+1;
         while(i<gt){
             if(arr[i] < v){
                 Tlt.exch(arr,i,lt+1);
