@@ -1,4 +1,4 @@
-package com.javabase.innerclasses.innerclasses;
+package com.javabase.innerclasses.c10_6_匿名内部类;
 
 //: innerclasses/Wrapping.java
 public class Wrapping {
