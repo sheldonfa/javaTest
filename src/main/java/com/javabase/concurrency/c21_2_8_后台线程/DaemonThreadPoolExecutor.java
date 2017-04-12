@@ -1,5 +1,7 @@
 //: net/mindview/util/DaemonThreadPoolExecutor.java
-package net.mindview.util;
+package com.javabase.concurrency.c21_2_8_后台线程;
+import com.javabase.concurrency.c21_2_8_后台线程.DaemonThreadFactory;
+
 import java.util.concurrent.*;
 
 public class DaemonThreadPoolExecutor

@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/Daemons.java
+package com.javabase.concurrency.c21_2_8_后台线程;//: concurrency/Daemons.java
 // Daemon threads spawn other daemon threads.
 import java.util.concurrent.*;
 import static net.mindview.util.Print.*;
@@ -26,7 +26,7 @@ class DaemonSpawn implements Runnable {
   }
 }
 
-public class Daemons {
+public class D3_Daemons {
   public static void main(String[] args) throws Exception {
     Thread d = new Thread(new Daemon());
     d.setDaemon(true);

@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/SimplePriorities.java
+package com.javabase.concurrency.c21_2_6_优先级;//: concurrency/SimplePriorities.java
 // Shows the use of thread priorities.
 import java.util.concurrent.*;
 
