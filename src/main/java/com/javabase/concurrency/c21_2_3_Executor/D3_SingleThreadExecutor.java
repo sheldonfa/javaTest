@@ -1,7 +1,12 @@
-package com.javabase.concurrency;//: concurrency/SingleThreadExecutor.java
+package com.javabase.concurrency.c21_2_3_Executor;//: concurrency/SingleThreadExecutor.java
+import com.javabase.concurrency.c21_2_2.LiftOff;
+
 import java.util.concurrent.*;
 
-public class SingleThreadExecutor {
+public class D3_SingleThreadExecutor {
+  /**
+   * SingleThreadExecutor就像线程数量为1的FixedThreadPool。
+   */
   public static void main(String[] args) {
     ExecutorService exec =
       Executors.newSingleThreadExecutor();

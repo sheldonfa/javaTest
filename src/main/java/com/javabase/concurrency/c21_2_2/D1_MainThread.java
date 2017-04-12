@@ -1,8 +1,12 @@
-package com.javabase.concurrency;//: concurrency/MainThread.java
+package com.javabase.concurrency.c21_2_2;//: concurrency/MainThread.java
 
-public class MainThread {
+
+public class D1_MainThread {
   public static void main(String[] args) {
     LiftOff launch = new LiftOff();
+    /**
+     * run只是个普通的方法，直接调用run没有什么特别的
+     */
     launch.run();
   }
 } /* Output:

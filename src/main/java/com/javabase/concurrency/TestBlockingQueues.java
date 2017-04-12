@@ -1,5 +1,7 @@
 package com.javabase.concurrency;//: concurrency/TestBlockingQueues.java
 // {RunByHand}
+import com.javabase.concurrency.c21_2_2.LiftOff;
+
 import java.util.concurrent.*;
 import java.io.*;
 import static net.mindview.util.Print.*;

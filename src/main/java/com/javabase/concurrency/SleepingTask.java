@@ -1,5 +1,7 @@
 package com.javabase.concurrency;//: concurrency/SleepingTask.java
 // Calling sleep() to pause for a while.
+import com.javabase.concurrency.c21_2_2.LiftOff;
+
 import java.util.concurrent.*;
 
 public class SleepingTask extends LiftOff {

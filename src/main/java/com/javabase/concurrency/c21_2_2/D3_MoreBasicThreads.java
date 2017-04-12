@@ -1,7 +1,13 @@
-package com.javabase.concurrency;//: concurrency/MoreBasicThreads.java
+package com.javabase.concurrency.c21_2_2;//: concurrency/MoreBasicThreads.java
 // Adding more threads.
 
-public class MoreBasicThreads {
+/**
+ * 多个线程的执行混在了一起，每次执行结果可能不同
+ *
+ * 这是由线程调度器自动控制的，如果有多个处理器，那么它会在这些处理器之间默默地分发线程。
+ *
+ */
+public class D3_MoreBasicThreads {
   public static void main(String[] args) {
     for(int i = 0; i < 5; i++)
       new Thread(new LiftOff()).start();

@@ -1,9 +1,16 @@
-package com.javabase.concurrency;//: concurrency/FixedThreadPool.java
+package com.javabase.concurrency.c21_2_3_Executor;//: concurrency/FixedThreadPool.java
+import com.javabase.concurrency.c21_2_2.LiftOff;
+
 import java.util.concurrent.*;
 
-public class FixedThreadPool {
+public class D2_FixedThreadPool {
   public static void main(String[] args) {
     // Constructor argument is number of threads:
+    /**
+     * 一次性预先执行线程分配，可以限制线程的数量
+     *
+     * 线程在可能的情况下，都会被自动复用。例如：CachedThreadPool在回收旧线程时停止创建新线程。
+     */
     ExecutorService exec = Executors.newFixedThreadPool(5);
     for(int i = 0; i < 5; i++)
       exec.execute(new LiftOff());

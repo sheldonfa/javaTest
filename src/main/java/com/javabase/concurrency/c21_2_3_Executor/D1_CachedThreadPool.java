@@ -1,11 +1,19 @@
-package com.javabase.concurrency;//: concurrency/CachedThreadPool.java
+package com.javabase.concurrency.c21_2_3_Executor;//: concurrency/CachedThreadPool.java
+import com.javabase.concurrency.c21_2_2.LiftOff;
+
 import java.util.concurrent.*;
 
-public class CachedThreadPool {
+public class D1_CachedThreadPool {
+  /**
+   * 单个Executor被用来创建和管理系统中所有的任务。
+   */
   public static void main(String[] args) {
     ExecutorService exec = Executors.newCachedThreadPool();
     for(int i = 0; i < 5; i++)
       exec.execute(new LiftOff());
+    /**
+     * shutdown可以防止新任务被提交给这个Executor。这个程序将在Executor中所有任务完成之后尽快推出。
+     */
     exec.shutdown();
   }
 } /* Output: (Sample)
