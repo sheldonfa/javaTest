@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/SleepingTask.java
+package com.javabase.concurrency.c21_2_5_休眠;//: concurrency/SleepingTask.java
 // Calling sleep() to pause for a while.
 import com.javabase.concurrency.c21_2_2.LiftOff;
 
@@ -12,8 +12,15 @@ public class SleepingTask extends LiftOff {
         // Old-style:
         // Thread.sleep(100);
         // Java SE5/6-style:
+        /**
+         * 新的sleep实现方式感觉更好
+         */
         TimeUnit.MILLISECONDS.sleep(100);
       }
+      /**
+       * sleep会抛出 中断异常
+       * 异常必须在run中捕获，因为异常不能跨线程传播回main()。
+       */
     } catch(InterruptedException e) {
       System.err.println("Interrupted");
     }
