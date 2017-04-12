@@ -236,10 +236,11 @@ public class Client {
     public void test19(){
         String s1 = new String("hello");
         String s2 = new String("hello");
+        System.out.println(s1.intern()==s1);
         System.out.println(s1==s2);
         String s3 = s1.intern();
         String s4 = s2.intern();
-        System.out.println(s3==s3);
+        System.out.println(s3==s4);
     }
 
     /**
@@ -254,12 +255,22 @@ public class Client {
         System.out.println(s2.intern()==s2);
     }
 
+
     @Test
     public void test19b(){
         String s1 = new StringBuilder("计算器").append("软件").toString();
         String s2 = new StringBuilder("计算器").append("软件").toString();
         System.out.println(s1.intern()==s1);
         System.out.println(s2.intern()==s2);
+        System.out.println(s2.intern()==s1.intern());
+        System.out.println(s2==s1);
+    }
+
+    @Test
+    public void test19c(){
+        String s2 = new String("fangxin");
+        String s1 = "fangxin";
+        System.out.println(s1==s2);
     }
 
     /**
