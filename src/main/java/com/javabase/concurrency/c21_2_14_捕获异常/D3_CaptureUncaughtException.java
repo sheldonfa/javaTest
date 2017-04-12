@@ -1,4 +1,4 @@
-package com.javabase.concurrency.c21_2_14;
+package com.javabase.concurrency.c21_2_14_捕获异常;
 
 import java.util.concurrent.*;
 
@@ -13,6 +13,11 @@ class ExceptionThread2 implements Runnable {
   }
 }
 
+/**
+ * step1:
+ * Thread.UncaughtExceptionHandler是SE5接口，它允许你在每个线程对象上附加一个异常处理器
+ * 该类会在线程因为未捕获的异常而濒临死亡的时候被调用
+ */
 class MyUncaughtExceptionHandler implements
 Thread.UncaughtExceptionHandler {
   public void uncaughtException(Thread t, Throwable e) {
@@ -20,7 +25,11 @@ Thread.UncaughtExceptionHandler {
   }
 }
 
-/*新的线程工厂实现类，捕获线程的异常*/
+/**
+ * step2:
+ * 为了使用“未捕获异常助手”类，我们新创建一个线程工厂，该工厂将每个新建的线程对象上附加一个“未捕获异常助手”。
+ *
+ */
 class HandlerThreadFactory implements ThreadFactory {
   public Thread newThread(Runnable r) {
     System.out.println(this + " creating new Thread");
@@ -34,9 +43,13 @@ class HandlerThreadFactory implements ThreadFactory {
   }
 }
 
-public class CaptureUncaughtException {
+public class D3_CaptureUncaughtException {
   public static void main(String[] args) {
     ExecutorService exec = Executors.newCachedThreadPool(
+            /**
+             * step3:
+             * 将新创建的“线程工厂”传递给Executors
+             */
       new HandlerThreadFactory());
     exec.execute(new ExceptionThread2());
   }
