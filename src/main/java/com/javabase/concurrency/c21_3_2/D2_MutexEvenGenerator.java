@@ -6,7 +6,7 @@ import com.javabase.concurrency.c21_3_1.IntGenerator;
 
 import java.util.concurrent.locks.*;
 
-public class MutexEvenGenerator extends IntGenerator {
+public class D2_MutexEvenGenerator extends IntGenerator {
   private int currentEvenValue = 0;
   private Lock lock = new ReentrantLock();
   public int next() {
@@ -21,6 +21,6 @@ public class MutexEvenGenerator extends IntGenerator {
     }
   }
   public static void main(String[] args) {
-    EvenChecker.test(new MutexEvenGenerator());
+    EvenChecker.test(new D2_MutexEvenGenerator());
   }
 } ///:~

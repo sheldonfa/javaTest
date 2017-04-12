@@ -1,6 +1,6 @@
 //: concurrency/waxomatic/WaxOMatic.java
 // Basic task cooperation.
-package com.javabase.concurrency.waxomatic;
+package com.javabase.concurrency.c21_5_1_wait和notifyAll;
 import java.util.concurrent.*;
 import static net.mindview.util.Print.*;
 

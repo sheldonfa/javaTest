@@ -10,8 +10,12 @@ import java.util.concurrent.*;
  *
  * 根据Brian的同步规则，这里的getValue()需要加锁
  */
-public class AtomicityTest implements Runnable {
+public class D1_AtomicityTest implements Runnable {
   private int i = 0;
+
+    /**
+     * 尽管return i是原子性的，但是getValue可以在中间状态读取数据。而且i不是volatile的，存在可视性问题
+     */
   public int getValue() { return i; }
   private synchronized void evenIncrement() {
     i++;
@@ -22,9 +26,13 @@ public class AtomicityTest implements Runnable {
     while(true)
       evenIncrement();
   }
+
+    /**
+     * 出现了不希望的奇数。
+     */
   public static void main(String[] args) {
     ExecutorService exec = Executors.newCachedThreadPool();
-    AtomicityTest at = new AtomicityTest();
+    D1_AtomicityTest at = new D1_AtomicityTest();
     exec.execute(at);
     while(true) {
       int val = at.getValue();
