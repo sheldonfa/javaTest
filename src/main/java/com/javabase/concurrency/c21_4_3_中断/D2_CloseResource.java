@@ -1,13 +1,15 @@
-package com.javabase.concurrency;//: concurrency/CloseResource.java
+package com.javabase.concurrency.c21_4_3_中断;//: concurrency/CloseResource.java
 // Interrupting a blocked task by
 // closing the underlying resource.
 // {RunByHand}
+import com.javabase.concurrency.c21_4_3_中断.IOBlocked;
+
 import java.net.*;
 import java.util.concurrent.*;
 import java.io.*;
 import static net.mindview.util.Print.*;
 
-public class CloseResource {
+public class D2_CloseResource {
   public static void main(String[] args) throws Exception {
     ExecutorService exec = Executors.newCachedThreadPool();
     ServerSocket server = new ServerSocket(8080);

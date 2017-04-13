@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/NotifyVsNotifyAll.java
+package com.javabase.concurrency.c21_5_2_notify和notifyAll;//: concurrency/NotifyVsNotifyAll.java
 import java.util.concurrent.*;
 import java.util.*;
 
@@ -28,6 +28,10 @@ class Task2 implements Runnable {
   public void run() { blocker.waitingCall(); }
 }
 
+/**
+ * notifyAll将唤醒“所有正在等待的任务”。这是否意味着在程序中任何地方，任何处于wait状态中的任务都将被任何notifyAll调用唤醒呢？
+ * 实际上：notifyAll被调用时，只用等待这个锁的任务才会被唤醒。
+ */
 public class NotifyVsNotifyAll {
   public static void main(String[] args) throws Exception {
     ExecutorService exec = Executors.newCachedThreadPool();

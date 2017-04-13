@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/OrnamentalGarden.java
+package com.javabase.concurrency.c21_4_1;//: concurrency/OrnamentalGarden.java
 import java.util.concurrent.*;
 import java.util.*;
 import static net.mindview.util.Print.*;
@@ -33,6 +33,9 @@ class Entrance implements Runnable {
     entrances.add(this);
   }
   public void run() {
+    /**
+     * 3、如果cancled字段是true，说明标志了关闭信号
+     */
     while(!canceled) {
       synchronized(this) {
         ++number;
@@ -44,6 +47,9 @@ class Entrance implements Runnable {
         print("sleep interrupted");
       }
     }
+    /**
+     * 线程结束前打印
+     */
     print("Stopping " + this);
   }
   public synchronized int getValue() { return number; }
@@ -61,15 +67,27 @@ class Entrance implements Runnable {
   }
 }
 
+/**
+ * 一个大花园，统计十个门的数量
+ */
 public class OrnamentalGarden {
   public static void main(String[] args) throws Exception {
     ExecutorService exec = Executors.newCachedThreadPool();
     for(int i = 0; i < 5; i++)
       exec.execute(new Entrance(i));
     // Run for a while, then stop and collect the data:
+    /**
+     * 1、运行一段时间后，关闭所有线程
+     */
     TimeUnit.SECONDS.sleep(3);
+    /**
+     * 2、关闭的方式就是将Entrance的一个字段cancel置为true
+     */
     Entrance.cancel();
     exec.shutdown();
+    /**
+     * 4、awaitTermination等待每个任务结束，如果所有的任务在超时时间达到之前全部结束，返回true
+     */
     if(!exec.awaitTermination(250, TimeUnit.MILLISECONDS))
       print("Some tasks were not terminated!");
     print("Total: " + Entrance.getTotalCount());

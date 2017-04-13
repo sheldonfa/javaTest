@@ -5,6 +5,9 @@ import java.util.concurrent.*;
 import static net.mindview.util.Print.*;
 
 class Car {
+  /**
+   * 涂蜡-抛光处理状态
+   */
   private boolean waxOn = false;
   public synchronized void waxed() {
     waxOn = true; // Ready to buff
@@ -14,11 +17,13 @@ class Car {
     waxOn = false; // Ready for another coat of wax
     notifyAll();
   }
+
   public synchronized void waitForWaxing()
   throws InterruptedException {
     while(waxOn == false)
       wait();
   }
+
   public synchronized void waitForBuffing()
   throws InterruptedException {
     while(waxOn == true)
@@ -26,15 +31,25 @@ class Car {
   }
 }
 
+/**
+ * 打蜡的过程
+ */
 class WaxOn implements Runnable {
   private Car car;
   public WaxOn(Car c) { car = c; }
+
   public void run() {
     try {
       while(!Thread.interrupted()) {
         printnb("Wax On! ");
         TimeUnit.MILLISECONDS.sleep(200);
+        /**
+         * 打蜡动作
+         */
         car.waxed();
+        /**
+         * 等待抛光。如果抛光完成。会有线程将打蜡置为false，表示下一辆车需要打蜡
+         */
         car.waitForBuffing();
       }
     } catch(InterruptedException e) {
@@ -50,9 +65,15 @@ class WaxOff implements Runnable {
   public void run() {
     try {
       while(!Thread.interrupted()) {
+        /**
+         * 等待打蜡，如果没有已经打蜡的车(waxOn=false)则挂起，如果有走下一步
+         */
         car.waitForWaxing();
         printnb("Wax Off! ");
         TimeUnit.MILLISECONDS.sleep(200);
+        /**
+         * 抛光。同时将waxOn置为false，表示下辆车需要打蜡了
+         */
         car.buffed();
       }
     } catch(InterruptedException e) {

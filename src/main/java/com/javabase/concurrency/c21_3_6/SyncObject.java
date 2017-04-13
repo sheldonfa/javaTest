@@ -21,6 +21,10 @@ class DualSynch {
 }
 
 /*DualSynch两个同步内容，一个同步方法自己锁，一个同步块用SyncObejct锁，那么会阻塞吗？*/
+
+/**
+ * 没有
+ */
 public class SyncObject {
   public static void main(String[] args) {
     final DualSynch ds = new DualSynch();

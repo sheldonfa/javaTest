@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/NIOInterruption.java
+package com.javabase.concurrency.c21_4_3_中断;//: concurrency/NIOInterruption.java
 // Interrupting a blocked NIO channel.
 import java.net.*;
 import java.nio.*;
@@ -25,7 +25,7 @@ class NIOBlocked implements Runnable {
   }
 }
 
-public class NIOInterruption {
+public class D3_NIOInterruption {
   public static void main(String[] args) throws Exception {
     ExecutorService exec = Executors.newCachedThreadPool();
     ServerSocket server = new ServerSocket(8080);

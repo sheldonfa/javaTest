@@ -35,6 +35,10 @@ class Pair { // Not thread-safe
 }
 
 // Protect a Pair inside a thread-safe class:
+
+/**
+ * Pair不安全，用PairManager
+ */
 abstract class PairManager {
   AtomicInteger checkCounter = new AtomicInteger(0);
   protected Pair p = new Pair();
