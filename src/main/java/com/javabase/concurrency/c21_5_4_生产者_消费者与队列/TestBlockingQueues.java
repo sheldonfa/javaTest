@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/TestBlockingQueues.java
+package com.javabase.concurrency.c21_5_4_生产者_消费者与队列;//: concurrency/TestBlockingQueues.java
 // {RunByHand}
 import com.javabase.concurrency.c21_2_2.LiftOff;
 

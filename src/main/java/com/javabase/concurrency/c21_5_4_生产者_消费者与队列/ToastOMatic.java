@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/ToastOMatic.java
+package com.javabase.concurrency.c21_5_4_生产者_消费者与队列;//: concurrency/ToastOMatic.java
 // A toaster that uses queues.
 import java.util.concurrent.*;
 import java.util.*;
@@ -77,6 +77,9 @@ class Jammer implements Runnable {
     try {
       while(!Thread.interrupted()) {
         // Blocks until next piece of toast is available:
+        /**
+         * 如果队列中take不出东西来，将阻塞，直到得到为止
+         */
         Toast t = butteredQueue.take();
         t.jam();
         print(t);

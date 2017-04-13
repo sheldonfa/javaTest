@@ -1,4 +1,4 @@
-package com.javabase.concurrency;//: concurrency/PipedIO.java
+package com.javabase.concurrency.c21_5_5_任务间使用管道输入输出;//: concurrency/PipedIO.java
 // Using pipes for inter-task I/O
 import java.util.concurrent.*;
 import java.io.*;
