@@ -6,7 +6,7 @@ public class D1_DotThis {
   public class Inner {
     public D1_DotThis outer() {
       /**
-       * 内部类的名字后面跟上.this可以生成对外部类对象的引用
+       * 外部类的名字后面跟上.this可以生成对外部类对象的引用
        */
       return D1_DotThis.this;
       // A plain "this" would be Inner's "this"
