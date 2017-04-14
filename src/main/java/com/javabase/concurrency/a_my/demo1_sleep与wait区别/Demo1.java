@@ -1,4 +1,4 @@
-package com.javabase.concurrency.a_my.demo1;
+package com.javabase.concurrency.a_my.demo1_sleep与wait区别;
 
 /**
  * sleep与wait区别
