@@ -1,6 +1,8 @@
 package com.javabase.typeinfo.typeinfo;//: typeinfo/Robot.java
 import java.util.*;
-import net.mindview.util.*;
+
+import com.net.mindview.util.Null;
+import com.net.mindview.util.*;
 
 public interface Robot {
   String name();

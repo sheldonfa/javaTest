@@ -1,6 +1,6 @@
 package com.javabase.innerclasses.innerclasses;//: innerclasses/LocalInnerClass.java
 // Holds a sequence of Objects.
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 interface Counter {
   int next();

@@ -1,5 +1,7 @@
 package com.javabase.generics.generics;//: generics/PrimitiveGenericTest.java
-import net.mindview.util.*;
+import com.net.mindview.util.Generator;
+import com.net.mindview.util.RandomGenerator;
+import com.net.mindview.util.*;
 
 // Fill an array using a generator:
 class FArray {

@@ -1,5 +1,5 @@
 package com.javabase.string.strings;//: strings/Replacing.java
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class Replacing {
   static String s = Splitting.knights;

@@ -1,7 +1,10 @@
 package com.javabase.concurrency;//: concurrency/Tester.java
 // Framework to test performance of concurrency containers.
 import java.util.concurrent.*;
-import net.mindview.util.*;
+
+import com.net.mindview.util.Generated;
+import com.net.mindview.util.RandomGenerator;
+import com.net.mindview.util.*;
 
 public abstract class Tester<C> {
   static int testReps = 10;

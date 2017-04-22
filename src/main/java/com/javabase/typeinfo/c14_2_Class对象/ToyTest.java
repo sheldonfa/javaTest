@@ -1,7 +1,7 @@
 //: typeinfo/toys/ToyTest.java
 // Testing class Class.
 package com.javabase.typeinfo.c14_2_Class对象;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 interface HasBatteries {}
 interface Waterproof {}

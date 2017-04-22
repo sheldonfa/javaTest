@@ -1,10 +1,11 @@
 package com.javabase.generics.generics;//: generics/Fill2.java
 // Using adapters to simulate latent typing.
 // {main: Fill2Test}
-import generics.coffee.*;
+import com.net.mindview.util.Generator;
+import com.generics.coffee.*;
 import java.util.*;
-import net.mindview.util.*;
-import static net.mindview.util.Print.*;
+import com.net.mindview.util.*;
+import static com.net.mindview.util.Print.*;
 
 interface Addable<T> { void add(T t); }
 
@@ -21,7 +22,7 @@ public class Fill2 {
   }
   // Generator version:
   public static <T> void fill(Addable<T> addable,
-  Generator<T> generator, int size) {
+                              Generator<T> generator, int size) {
     for(int i = 0; i < size; i++)
       addable.add(generator.next());
   }

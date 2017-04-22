@@ -1,6 +1,6 @@
 package com.javabase.concurrency.c21_2_11_加入线程;//: concurrency/Joining.java
 // Understanding join().
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class Sleeper extends Thread {
   private int duration;

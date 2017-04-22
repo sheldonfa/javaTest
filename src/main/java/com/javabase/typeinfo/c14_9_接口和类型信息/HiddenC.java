@@ -2,7 +2,7 @@
 package com.javabase.typeinfo.c14_9_接口和类型信息;
 import com.javabase.typeinfo.typeinfo.interfacea.A;
 
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class C implements A {
   public void f() { print("public C.f()"); }

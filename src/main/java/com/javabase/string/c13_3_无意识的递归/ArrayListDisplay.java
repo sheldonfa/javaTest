@@ -1,5 +1,5 @@
 package com.javabase.string.c13_3_无意识的递归;//: strings/ArrayListDisplay.java
-import generics.coffee.*;
+import com.generics.coffee.*;
 import java.util.*;
 
 public class ArrayListDisplay {

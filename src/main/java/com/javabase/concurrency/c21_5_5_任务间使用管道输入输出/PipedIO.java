@@ -3,7 +3,7 @@ package com.javabase.concurrency.c21_5_5_任务间使用管道输入输出;//: c
 import java.util.concurrent.*;
 import java.io.*;
 import java.util.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class Sender implements Runnable {
   private Random rand = new Random(47);

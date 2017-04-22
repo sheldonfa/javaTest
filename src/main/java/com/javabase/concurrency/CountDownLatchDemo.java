@@ -1,7 +1,7 @@
 package com.javabase.concurrency;//: concurrency/CountDownLatchDemo.java
 import java.util.concurrent.*;
 import java.util.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 // Performs some portion of a task:
 class TaskPortion implements Runnable {

@@ -1,7 +1,7 @@
 package com.javabase.typeinfo.c14_7_动态代理;//: typeinfo/SelectingMethods.java
 // Looking for particular methods in a dynamic proxy.
 import java.lang.reflect.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class MethodSelector implements InvocationHandler {
   private Object proxied;

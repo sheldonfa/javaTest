@@ -1,7 +1,9 @@
 package com.javabase.string.strings;//: strings/TheReplacements.java
 import java.util.regex.*;
-import net.mindview.util.*;
-import static net.mindview.util.Print.*;
+
+import com.net.mindview.util.TextFile;
+import com.net.mindview.util.*;
+import static com.net.mindview.util.Print.*;
 
 /*! Here's a block of text to use as input to
     the regular expression matcher. Note that we'll

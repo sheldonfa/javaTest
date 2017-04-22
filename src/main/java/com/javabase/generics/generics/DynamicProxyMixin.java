@@ -1,8 +1,10 @@
 package com.javabase.generics.generics;//: generics/DynamicProxyMixin.java
 import java.lang.reflect.*;
 import java.util.*;
-import net.mindview.util.*;
-import static net.mindview.util.Tuple.*;
+
+import com.net.mindview.util.TwoTuple;
+import com.net.mindview.util.*;
+import static com.net.mindview.util.Tuple.*;
 
 class MixinProxy implements InvocationHandler {
   Map<String,Object> delegatesByMethod;

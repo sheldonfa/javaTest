@@ -1,5 +1,5 @@
 package com.javabase.string.strings;//: strings/Immutable.java
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class Immutable {
   public static String upcase(String s) {

@@ -2,7 +2,7 @@ package com.javabase.concurrency;//: concurrency/ReaderWriterList.java
 import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
 import java.util.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class ReaderWriterList<T> {
   private ArrayList<T> lockedList;

@@ -4,7 +4,7 @@ package com.javabase.typeinfo.c14_6_反射;//: typeinfo/ShowMethods.java
 // {Args: ShowMethods}
 import java.lang.reflect.*;
 import java.util.regex.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class ShowMethods {
   private static String usage =

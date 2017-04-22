@@ -1,6 +1,6 @@
 package com.javabase.typeinfo.c14_2_Class对象;//: typeinfo/SweetShop.java
 // Examination of the way the class loader works.
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class Candy {
   static { print("Loading Candy"); }

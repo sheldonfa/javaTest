@@ -3,7 +3,10 @@ package com.javabase.concurrency;//: concurrency/MapComparisons.java
 // Rough comparison of thread-safe Map performance.
 import java.util.concurrent.*;
 import java.util.*;
-import net.mindview.util.*;
+
+import com.net.mindview.util.CountingGenerator;
+import com.net.mindview.util.MapData;
+import com.net.mindview.util.*;
 
 abstract class MapTest
 extends Tester<Map<Integer,Integer>> {

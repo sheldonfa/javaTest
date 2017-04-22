@@ -2,7 +2,7 @@ package com.javabase.concurrency.c21_5_4_生产者_消费者与队列;//: concur
 // A toaster that uses queues.
 import java.util.concurrent.*;
 import java.util.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class Toast {
   public enum Status { DRY, BUTTERED, JAMMED }

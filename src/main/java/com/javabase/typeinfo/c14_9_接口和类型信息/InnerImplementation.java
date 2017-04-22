@@ -2,7 +2,7 @@ package com.javabase.typeinfo.c14_9_接口和类型信息;//: typeinfo/InnerImpl
 // Private inner classes can't hide from reflection.
 import com.javabase.typeinfo.typeinfo.interfacea.A;
 
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class InnerA {
   private static class C implements A {

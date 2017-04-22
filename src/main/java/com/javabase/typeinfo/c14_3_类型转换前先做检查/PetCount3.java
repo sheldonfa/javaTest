@@ -5,8 +5,9 @@ import java.util.*;
 import com.javabase.typeinfo.c14_3_类型转换前先做检查.pets.LiteralPetCreator;
 import com.javabase.typeinfo.c14_3_类型转换前先做检查.pets.Pet;
 import com.javabase.typeinfo.c14_3_类型转换前先做检查.pets.Pets;
-import net.mindview.util.*;
-import static net.mindview.util.Print.*;
+import com.net.mindview.util.MapData;
+import com.net.mindview.util.*;
+import static com.net.mindview.util.Print.*;
 
 public class PetCount3 {
   static class PetCounter

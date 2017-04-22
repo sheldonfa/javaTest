@@ -2,12 +2,11 @@ package com.javabase.concurrency.c21_4_3_中断;//: concurrency/CloseResource.ja
 // Interrupting a blocked task by
 // closing the underlying resource.
 // {RunByHand}
-import com.javabase.concurrency.c21_4_3_中断.IOBlocked;
 
 import java.net.*;
 import java.util.concurrent.*;
 import java.io.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class D2_CloseResource {
   public static void main(String[] args) throws Exception {

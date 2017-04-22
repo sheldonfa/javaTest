@@ -1,8 +1,9 @@
 package com.javabase.typeinfo.c14_3_类型转换前先做检查;//: typeinfo/PetCount4.java
 import com.javabase.typeinfo.c14_3_类型转换前先做检查.pets.Pet;
 import com.javabase.typeinfo.c14_3_类型转换前先做检查.pets.Pets;
-import net.mindview.util.*;
-import static net.mindview.util.Print.*;
+import com.net.mindview.util.TypeCounter;
+import com.net.mindview.util.*;
+import static com.net.mindview.util.Print.*;
 
 public class PetCount4 {
   public static void main(String[] args) {

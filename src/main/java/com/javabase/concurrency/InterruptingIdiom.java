@@ -2,7 +2,7 @@ package com.javabase.concurrency;//: concurrency/InterruptingIdiom.java
 // General idiom for interrupting a task.
 // {Args: 1100}
 import java.util.concurrent.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class NeedsCleanup {
   private final int id;

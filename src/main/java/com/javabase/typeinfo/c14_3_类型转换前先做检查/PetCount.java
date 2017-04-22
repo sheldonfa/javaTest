@@ -3,7 +3,7 @@ package com.javabase.typeinfo.c14_3_类型转换前先做检查;//: typeinfo/Pet
 import com.javabase.typeinfo.c14_3_类型转换前先做检查.pets.*;
 
 import java.util.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class PetCount {
   static class PetCounter extends HashMap<String,Integer> {

@@ -2,7 +2,7 @@ package com.javabase.concurrency.c21_2_8_后台线程;//: concurrency/DaemonFrom
 // Using a Thread Factory to create daemons.
 import java.util.concurrent.*;
 
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class D2_DaemonFromFactory implements Runnable {
   public void run() {

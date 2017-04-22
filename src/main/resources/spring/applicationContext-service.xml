@@ -13,5 +13,10 @@
 		                    http://www.springframework.org/schema/aop
 		                    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
+    <bean id="bookDaoId" class="spring.demo1.BookDao"/>
+
+    <bean id="bookServiceId" class="spring.demo1.BookService">
+        <property name="bookDao" ref="bookDaoId"/>
+    </bean>
 
 </beans>

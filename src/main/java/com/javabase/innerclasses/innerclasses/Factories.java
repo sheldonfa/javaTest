@@ -1,5 +1,5 @@
 package com.javabase.innerclasses.innerclasses;//: innerclasses/Factories.java
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 interface Service {
   void method1();

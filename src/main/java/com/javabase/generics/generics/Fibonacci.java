@@ -1,6 +1,7 @@
 package com.javabase.generics.generics;//: generics/Fibonacci.java
 // Generate a Fibonacci sequence.
-import net.mindview.util.*;
+import com.net.mindview.util.Generator;
+import com.net.mindview.util.*;
 
 public class Fibonacci implements Generator<Integer> {
   private int count = 0;

@@ -1,6 +1,10 @@
 package com.javabase.generics.generics;//: generics/TupleTest2.java
-import net.mindview.util.*;
-import static net.mindview.util.Tuple.*;
+import com.net.mindview.util.FiveTuple;
+import com.net.mindview.util.FourTuple;
+import com.net.mindview.util.ThreeTuple;
+import com.net.mindview.util.TwoTuple;
+import com.net.mindview.util.*;
+import static com.net.mindview.util.Tuple.*;
 
 public class TupleTest2 {
   static TwoTuple<String,Integer> f() {
@@ -10,12 +14,10 @@ public class TupleTest2 {
   static ThreeTuple<Amphibian,String,Integer> g() {
     return tuple(new Amphibian(), "hi", 47);
   }
-  static
-  FourTuple<Vehicle,Amphibian,String,Integer> h() {
+  static FourTuple<Vehicle,Amphibian,String,Integer> h() {
     return tuple(new Vehicle(), new Amphibian(), "hi", 47);
   }
-  static
-  FiveTuple<Vehicle,Amphibian,String,Integer,Double> k() {
+  static FiveTuple<Vehicle,Amphibian,String,Integer,Double> k() {
     return tuple(new Vehicle(), new Amphibian(),
       "hi", 47, 11.1);
   }

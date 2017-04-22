@@ -1,7 +1,7 @@
 package com.javabase.concurrency.c21_5_3_生产者与消费者;//: concurrency/Restaurant.java
 // The producer-consumer approach to task cooperation.
 import java.util.concurrent.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class Meal {
   private final int orderNum;

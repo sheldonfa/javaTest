@@ -2,8 +2,6 @@ package com.javabase.concurrency;//: concurrency/ResponsiveUI.java
 // User interface responsiveness.
 // {RunByHand}
 
-import net.mindview.util.Print;
-
 class UnresponsiveUI {
   private volatile double d = 1;
   public UnresponsiveUI() throws Exception {

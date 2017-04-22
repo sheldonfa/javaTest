@@ -1,5 +1,5 @@
 package com.javabase.typeinfo.c14_7_动态代理;//: typeinfo/SimpleProxyDemo.java
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 interface Interface {
   void doSomething();

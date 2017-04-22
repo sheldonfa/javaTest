@@ -2,7 +2,7 @@ package com.javabase.concurrency;//: concurrency/Philosopher.java
 // A dining philosopher
 import java.util.concurrent.*;
 import java.util.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class Philosopher implements Runnable {
   private Chopstick left;

@@ -1,6 +1,6 @@
 package com.javabase.innerclasses.c10_6_匿名内部类;//: innerclasses/AnonymousConstructor.java
 // Creating a constructor for an anonymous inner class.
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 abstract class Base {
   public Base(int i) {

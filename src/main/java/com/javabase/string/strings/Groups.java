@@ -1,6 +1,6 @@
 package com.javabase.string.strings;//: strings/Groups.java
 import java.util.regex.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class Groups {
   static public final String POEM =

@@ -2,7 +2,7 @@ package com.javabase.concurrency;//: concurrency/DelayQueueDemo.java
 import java.util.concurrent.*;
 import java.util.*;
 import static java.util.concurrent.TimeUnit.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class DelayedTask implements Runnable, Delayed {
   private static int counter = 0;

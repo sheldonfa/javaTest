@@ -1,7 +1,9 @@
 package com.javabase.generics.generics;//: generics/BankTeller.java
 // A very simple bank teller simulation.
 import java.util.*;
-import net.mindview.util.*;
+
+import com.net.mindview.util.Generator;
+import com.net.mindview.util.*;
 
 class Customer {
   private static long counter = 1;

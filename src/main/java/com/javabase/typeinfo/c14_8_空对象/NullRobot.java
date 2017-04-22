@@ -6,7 +6,8 @@ import java.util.*;
 import com.javabase.typeinfo.typeinfo.Operation;
 import com.javabase.typeinfo.typeinfo.Robot;
 import com.javabase.typeinfo.typeinfo.SnowRemovalRobot;
-import net.mindview.util.*;
+import com.net.mindview.util.Null;
+import com.net.mindview.util.*;
 
 class NullRobotProxyHandler implements InvocationHandler {
   private String nullName;

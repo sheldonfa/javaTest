@@ -2,7 +2,7 @@ package com.javabase.string.strings;//: strings/TestRegularExpression.java
 // Allows you to easily try out regular expressions.
 // {Args: abcabcabcdefabc "abc+" "(abc)+" "(abc){2,}" }
 import java.util.regex.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class TestRegularExpression {
   public static void main(String[] args) {

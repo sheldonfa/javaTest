@@ -2,7 +2,7 @@
 // Basic task cooperation.
 package com.javabase.concurrency.c21_5_1_wait和notifyAll;
 import java.util.concurrent.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class Car {
   /**

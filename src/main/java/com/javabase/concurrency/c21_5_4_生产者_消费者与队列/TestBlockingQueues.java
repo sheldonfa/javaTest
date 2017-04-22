@@ -4,7 +4,7 @@ import com.javabase.concurrency.c21_2_2.LiftOff;
 
 import java.util.concurrent.*;
 import java.io.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class LiftOffRunner implements Runnable {
   private BlockingQueue<LiftOff> rockets;

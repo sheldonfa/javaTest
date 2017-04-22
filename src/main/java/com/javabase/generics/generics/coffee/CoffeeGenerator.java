@@ -3,36 +3,37 @@
 package com.javabase.generics.generics.coffee;
 import java.util.*;
 
-import generics.coffee.*;
-import generics.coffee.Americano;
-import generics.coffee.Breve;
-import generics.coffee.Cappuccino;
-import generics.coffee.Coffee;
-import generics.coffee.Mocha;
-import net.mindview.util.*;
+import com.net.mindview.util.Generator;
+import com.generics.coffee.*;
+import com.generics.coffee.Americano;
+import com.generics.coffee.Breve;
+import com.generics.coffee.Cappuccino;
+import com.generics.coffee.Coffee;
+import com.generics.coffee.Mocha;
+import com.net.mindview.util.*;
 
 public class CoffeeGenerator
-implements Generator<generics.coffee.Coffee>, Iterable<generics.coffee.Coffee> {
-  private Class[] types = { generics.coffee.Latte.class, Mocha.class,
+implements Generator<Coffee>, Iterable<Coffee> {
+  private Class[] types = { Latte.class, Mocha.class,
     Cappuccino.class, Americano.class, Breve.class, };
   private static Random rand = new Random(47);
   public CoffeeGenerator() {}
   // For iteration:
   private int size = 0;
   public CoffeeGenerator(int sz) { size = sz; }	
-  public generics.coffee.Coffee next() {
+  public Coffee next() {
     try {
-      return (generics.coffee.Coffee)
+      return (Coffee)
         types[rand.nextInt(types.length)].newInstance();
       // Report programmer errors at run time:
     } catch(Exception e) {
       throw new RuntimeException(e);
     }
   }
-  class CoffeeIterator implements Iterator<generics.coffee.Coffee> {
+  class CoffeeIterator implements Iterator<Coffee> {
     int count = size;
     public boolean hasNext() { return count > 0; }
-    public generics.coffee.Coffee next() {
+    public Coffee next() {
       count--;
       return CoffeeGenerator.this.next();
     }
@@ -40,7 +41,7 @@ implements Generator<generics.coffee.Coffee>, Iterable<generics.coffee.Coffee> {
       throw new UnsupportedOperationException();
     }
   };	
-  public Iterator<generics.coffee.Coffee> iterator() {
+  public Iterator<Coffee> iterator() {
     return new CoffeeIterator();
   }
   public static void main(String[] args) {

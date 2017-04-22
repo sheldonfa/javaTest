@@ -1,7 +1,7 @@
 package com.javabase.concurrency.c21_2_8_后台线程;//: concurrency/Daemons.java
 // Daemon threads spawn other daemon threads.
 import java.util.concurrent.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 class Daemon implements Runnable {
   private Thread[] t = new Thread[10];

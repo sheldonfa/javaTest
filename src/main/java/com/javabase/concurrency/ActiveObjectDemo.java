@@ -4,7 +4,7 @@ package com.javabase.concurrency;//: concurrency/ActiveObjectDemo.java
 // to asynch methods.
 import java.util.concurrent.*;
 import java.util.*;
-import static net.mindview.util.Print.*;
+import static com.net.mindview.util.Print.*;
 
 public class ActiveObjectDemo {
   private ExecutorService ex =

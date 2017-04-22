@@ -1,9 +1,9 @@
 package com.javabase.generics.generics;//: generics/WatercolorSets.java
-import generics.watercolors.*;
+import com.generics.watercolors.*;
 import java.util.*;
-import static net.mindview.util.Print.*;
-import static net.mindview.util.Sets.*;
-import static generics.watercolors.Watercolors.*;
+import static com.net.mindview.util.Print.*;
+import static com.net.mindview.util.Sets.*;
+import static com.generics.watercolors.Watercolors.*;
 
 public class WatercolorSets {
   public static void main(String[] args) {
