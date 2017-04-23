@@ -17,16 +17,34 @@ interface B extends A{
 
 public class Test extends Date{
     public static void main(String[] args) {
-        ArrayList<String> strings = new ArrayList<String>();
 
-        Integer[] a = new Integer[]{3,5};
-        Collections.sort(strings, new Comparator<String>() {
+        Human human = new Human() {
             @Override
-            public int compare(String o1, String o2) {
-                return 0;
+            public void cry() {
+                System.out.println("哦哦哦哦");
             }
-        });
+        };
+
+
+        Human human1 = new Human();
+        Human human2 = human1.new OOO();
+
     }
 
 }
+
+class  Human{
+
+    class OOO extends Human {
+        public void cry(){
+            System.out.println("aasdfa");
+        }
+    }
+
+    void cry() {
+
+    }
+
+}
+
 

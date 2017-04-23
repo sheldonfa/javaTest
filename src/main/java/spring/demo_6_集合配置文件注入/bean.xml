@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--生命周期 后处理器-->
+    <bean id="xiaoMing" class="spring.demo_6_集合配置文件注入.XiaoMing">
+        <property name="age" value="15"/>
+        <!--ArryaList-->
+        <property name="hobbies">
+            <list>
+                <value>抽烟</value>
+                <value>喝酒</value>
+                <value>烫头</value>
+            </list>
+        </property>
+        <!--HashMap-->
+        <property name="friends">
+            <map>
+                <entry key="1班" value="张三"/>
+                <entry key="2班" value="李四"/>
+            </map>
+        </property>
+        <!--Hashtable-->
+        <property name="girls">
+            <props>
+                <prop key="怡红院">如玉</prop>
+                <prop key="探春院">春花</prop>
+                <prop key="理发店">三儿</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
