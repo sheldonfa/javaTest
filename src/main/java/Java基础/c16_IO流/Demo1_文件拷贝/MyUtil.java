@@ -49,7 +49,7 @@ public class MyUtil {
      */
     public static void main(String[] args){
         try {
-            fileCopy("G:\\1工作\\1项目\\javaTest2\\src\\main\\java\\fangxin\\c16_IO流\\Demo1_文件拷贝\\test1","G:\\1工作\\1项目\\javaTest2\\src\\main\\java\\fangxin\\c16_IO流\\Demo1_文件拷贝\\test2");
+            fileCopyNIO("G:\\1工作\\1项目\\javaTest2\\src\\main\\java\\Java基础\\c16_IO流\\Demo1_文件拷贝\\test1","G:\\1工作\\1项目\\javaTest2\\src\\main\\java\\Java基础\\c16_IO流\\Demo1_文件拷贝\\test2");
         } catch (IOException e) {
             e.printStackTrace();
         }

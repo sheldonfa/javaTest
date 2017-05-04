@@ -1,6 +1,7 @@
 package Java基础.c16_IO流.Demo2_统计文件中的字符串;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -27,7 +28,7 @@ public class CountWord {
     }
 
     public static void main(String[] args) throws IOException {
-        String fileName = "G:\\1工作\\1项目\\javaTest2\\src\\main\\java\\fangxin\\c16_IO流\\Demo2_统计文件中的字符串\\test";
+        String fileName = "G:\\1工作\\1项目\\javaTest2\\src\\main\\java\\Java基础\\c16_IO流\\Demo2_统计文件中的字符串\\test";
         int count = countWordInFile(fileName, "apple");
         System.out.printf("共%d个",count);
     }

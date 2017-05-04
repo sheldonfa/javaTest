@@ -14,37 +14,6 @@
 		                    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
     <!--组件扫描service -->
-    <context:component-scan base-package="com.demo.service"/>
-
-    <!-- 配置事务管理器 -->
-    <!--<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
-        <!--&lt;!&ndash; 配置数据源 &ndash;&gt;-->
-        <!--<property name="dataSource" ref="dataSource"></property>-->
-    <!--</bean>-->
-
-    <!-- 配置通知 -->
-    <!--<tx:advice id="txAdvice" transaction-manager="transactionManager">-->
-        <!--<tx:attributes>-->
-            <!--&lt;!&ndash; 传播特性 &ndash;&gt;-->
-            <!--<tx:method name="save*" propagation="REQUIRED" />-->
-            <!--<tx:method name="add*" propagation="REQUIRED" />-->
-            <!--<tx:method name="insert*" propagation="REQUIRED" />-->
-            <!--<tx:method name="delete*" propagation="REQUIRED" />-->
-            <!--<tx:method name="del*" propagation="REQUIRED" />-->
-            <!--<tx:method name="remove*" propagation="REQUIRED" />-->
-            <!--<tx:method name="update*" propagation="REQUIRED" />-->
-            <!--<tx:method name="modify*" propagation="REQUIRED" />-->
-            <!--<tx:method name="find*" read-only="true" />-->
-            <!--<tx:method name="query*" read-only="true" />-->
-            <!--<tx:method name="select*" read-only="true" />-->
-            <!--<tx:method name="get*" read-only="true" />-->
-        <!--</tx:attributes>-->
-    <!--</tx:advice>-->
-
-    <!-- aop -->
-    <!--<aop:config>-->
-        <!--<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.demo.service.*.*(..))"/>-->
-    <!--</aop:config>-->
-
+    <context:component-scan base-package="com,spring"/>
 
 </beans>

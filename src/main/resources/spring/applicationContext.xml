@@ -13,11 +13,7 @@
 		                    http://www.springframework.org/schema/aop
 		                    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-    <!--生命周期 后处理器-->
-    <bean id="liyu" class="spring.demo_5_bean生命周期_bean后处理器.Liyu"
-            init-method="myInit"
-            destroy-method="myDestroy"/>
-        <!--bean后处理器-->
-    <bean class="spring.demo_5_bean生命周期_bean后处理器.MyBeanPostProcessor"/>
+        <import resource="applicationContext-transaction.xml"/>
+        <import resource="applicationContext-dao.xml"/>
 
 </beans>

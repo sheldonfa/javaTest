@@ -1,7 +1,7 @@
 package com.mybatis.test;
 
-import com.mybatis.mapper.UserMapper;
 import com.demo.pojo.User;
+import com.mybatis.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

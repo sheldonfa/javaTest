@@ -21,26 +21,5 @@ public class MapperTest {
     @Autowired
     private UserService userService;
 
-//    @Test
-//    public void testFindUserByUserVo() throws Exception {
-//        User user = userService.findUserById(1);
-//        System.out.println(user);
-//        Thread thread = new Thread();
-//        String doc = "doctor";
-//        switch (doc) {
-//            case "doctor":
-//                break;
-//            default:
-//                break;
-//        }
-//    }
-
-//    @Test
-//    public void test1(){
-//        byte a =1;
-//        byte b =2;
-//        byte c;
-//        c = (byte) (a+b);
-//    }
 
 }
