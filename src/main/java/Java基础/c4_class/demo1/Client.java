@@ -1,5 +1,8 @@
 package Java基础.c4_class.demo1;
 
+/**
+ * 父子类、静态代码块、代码块、构造函数执行顺序
+ */
 public class Client {
     public static void main(String[] args) {
         Child child = new Child();

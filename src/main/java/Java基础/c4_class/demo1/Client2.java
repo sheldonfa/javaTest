@@ -1,12 +1,9 @@
 package Java基础.c4_class.demo1;
 
+
 /**
- * @author fangxin
- * @date 2017/5/4.
+ * 直接加载类，也会触发静态代码块的执行
  */
-
-
-
 public class Client2 {
 
     public static void main(String[] args) throws ClassNotFoundException {
