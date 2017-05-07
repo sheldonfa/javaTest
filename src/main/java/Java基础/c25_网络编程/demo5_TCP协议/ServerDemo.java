@@ -24,10 +24,7 @@ public class ServerDemo {
 
         byte[] bytes = new byte[1024];
         int len = in.read(bytes);// 阻塞方法
-        String str = new String(bytes,0,len);
-        System.out.println(str);
-        // 释放资源
+        System.out.println(new String(bytes));
         s.close();
-//        ss.close();// 服务端不应该关闭
     }
 }

@@ -24,7 +24,7 @@ public class ReceiveDemo {
         InetAddress address = dp.getAddress();
         String ip = address.getHostAddress();
         byte[] receiveData = dp.getData();
-        System.out.println("从"+ip+"接受到的数据是"+receiveData);
+        System.out.println("从"+ip+"接受到的数据是"+new String(receiveData));
         // 释放资源
         ds.close();
     }

@@ -42,6 +42,8 @@ public class MyUtil {
             outChannel.write(buffer);
             buffer.clear();
         }
+        in.close();
+        out.close();
     }
 
     /**
@@ -49,7 +51,7 @@ public class MyUtil {
      */
     public static void main(String[] args){
         try {
-            fileCopyNIO("G:\\1工作\\1项目\\javaTest2\\src\\main\\java\\Java基础\\c16_IO流\\Demo1_文件拷贝\\test1","G:\\1工作\\1项目\\javaTest2\\src\\main\\java\\Java基础\\c16_IO流\\Demo1_文件拷贝\\test2");
+            fileCopyNIO("H:\\1工作\\1项目\\4测试项目\\javaTest2\\src\\main\\java\\Java基础\\c16_IO流\\Demo1_文件拷贝\\test1","H:\\1工作\\1项目\\4测试项目\\javaTest2\\src\\main\\java\\Java基础\\c16_IO流\\Demo1_文件拷贝\\test2");
         } catch (IOException e) {
             e.printStackTrace();
         }

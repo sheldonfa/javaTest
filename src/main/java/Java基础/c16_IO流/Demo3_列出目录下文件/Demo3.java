@@ -1,5 +1,6 @@
 package Java基础.c16_IO流.Demo3_列出目录下文件;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -11,7 +12,7 @@ public class Demo3 {
      *
      */
     public static void main(String[] args) throws IOException {
-        String filename = "G:\\1工作\\1项目\\javaTest2\\src\\main\\java\\fangxin\\c16_IO流\\Demo3_列出目录下文件";
+        String filename = "H:\\1工作\\1项目\\4测试项目\\javaTest2\\src\\main\\java\\Java基础\\c16_IO流\\Demo3_列出目录下文件";
         Path initPath = Paths.get(filename);
         Files.walkFileTree(initPath, new SimpleFileVisitor<Path>() {
             @Override
@@ -19,16 +20,6 @@ public class Demo3 {
                     throws IOException {
                 System.out.println(file.getFileName().toString());
                 return FileVisitResult.CONTINUE;
-            }
-
-            @Override
-            public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
-                return FileVisitResult.CONTINUE;
-            }
-
-            @Override
-            public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-                return super.postVisitDirectory(dir, exc);
             }
         });
     }

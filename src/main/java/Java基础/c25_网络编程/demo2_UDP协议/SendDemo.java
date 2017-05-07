@@ -16,7 +16,7 @@ public class SendDemo {
         // 创建数据
         byte[] data = "hello fangxin".getBytes();
         // 数据打包
-        InetAddress address = InetAddress.getByName("192.168.0.100");
+        InetAddress address = InetAddress.getByName("192.168.1.103");
         int port = 10086;
         DatagramPacket dp = new DatagramPacket(data,data.length,address,port);
         // 发送数据

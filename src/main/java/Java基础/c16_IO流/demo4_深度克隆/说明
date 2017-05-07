@@ -1,0 +1,8 @@
+demo4       序列化实现深度克隆
+技术点：
+1、用到了ByteArrayOutputStream和ByteArrayInputStream，这两个流由于读取的是内存中的数据，不需要close，GC会完成
+2、用到了ObjectOutputStream和ObjectInputStream，包装模式，主要是解决不能传对象的作为参数的问题
+
+爬坑
+1、ByteInputStream是ByteArrayInputStream的子类，ByteInputStream构造方法还要传数组的长度，感觉多余，没有用
+  但ByteOutputStream 不是 ByteArrayOutputStream的子类
