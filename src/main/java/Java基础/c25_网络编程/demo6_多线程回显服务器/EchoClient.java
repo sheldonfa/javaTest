@@ -16,7 +16,7 @@ class EchoClient implements Runnable{
     public void run() {
         Socket client = null;
         try {
-            FileReader fis = new FileReader("H:\\1工作\\1项目\\4测试项目\\javaTest2\\src\\main\\java\\Java基础\\c25_网络编程\\demo6_多线程回显服务器\\test");
+            FileReader fis = new FileReader("G:\\1工作\\1项目\\4测试项目\\javaTest2\\src\\main\\java\\Java基础\\c25_网络编程\\demo6_多线程回显服务器\\test");
             BufferedReader reader = new BufferedReader(fis);
             String line;
             while((line = reader.readLine())!=null){

@@ -13,7 +13,7 @@ public class BinarySearch {
         // 在arr[l,r]中查找target
         int n = arr.length;
         int l=0,r=n-1;
-        while(l<=r){
+        while(l<=r){// l小于r就一直循环下去
             int mid = l+(r-l)/2; // 用(l+r)/2容易溢出
             if(arr[mid].equals(target)){
                 return mid;

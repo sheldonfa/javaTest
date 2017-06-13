@@ -1,0 +1,480 @@
+{
+    "nodes": {
+        "flow-content_node_1": {
+            "output": [],
+            "input": [
+                {
+                    "field": "phone",
+                    "upload": "true",
+                    "dataType": "string",
+                    "name": "手机号",
+                    "default_value": "",
+                    "require": "true",
+                    "type": "string"
+                },
+                {
+                    "field": "name",
+                    "upload": "true",
+                    "dataType": "string",
+                    "name": "姓名",
+                    "default_value": "",
+                    "require": "true",
+                    "type": "string"
+                },
+                {
+                    "field": "sex",
+                    "upload": "true",
+                    "dataType": "string",
+                    "name": "性别",
+                    "default_value": "",
+                    "require": "true",
+                    "type": "string"
+                }
+            ],
+            "top": 33,
+            "left": 438,
+            "name": "开始",
+            "width": 24,
+            "variable": [
+                {
+                    "initial_value": 0,
+                    "field": "Abnormal_count_1",
+                    "name": "异常计数",
+                    "type": "string"
+                },
+                {
+                    "initial_value": 0,
+                    "field": "name",
+                    "name": "姓名",
+                    "type": "string"
+                }
+            ],
+            "type": "start",
+            "height": 24
+        },
+        "flow-content_node_7": {
+            "tts": [
+                {
+                    "record": "SIL,SFQR_1.wav,wav,SFQR_2.wav",
+                    "text": "SIL#您好，请问是#{name}#本人吗？"
+                }
+            ],
+            "top": 88,
+            "left": 395,
+            "name": "身份确认",
+            "width": 129,
+            "type": "speak",
+            "script": "",
+            "height": 28
+        },
+        "flow-content_node_14": {
+            "top": 281,
+            "left": 167,
+            "name": "Abnormal_count_1==？",
+            "width": 194,
+            "type": "judge",
+            "script": "",
+            "height": 42
+        },
+        "flow-content_node_36": {
+            "tts": [
+                {
+                    "record": "A1.wav",
+                    "text": "您可以跟亲朋好友借一下，帮您还上。逾期会产生额外的违约金和滞纳金，逾期产生的不良记录会一直保存下去，影响您日后的工作和生活。请您及时处理，以免造成严重后果。祝您生活愉快，再见。"
+                }
+            ],
+            "top": 518,
+            "left": 587,
+            "name": "A1",
+            "width": 129,
+            "type": "speak",
+            "script": "",
+            "height": 26
+        },
+        "flow-content_node_47": {
+            "tts": [
+                {
+                    "record": "FBRZG.wav",
+                    "text": "抱歉打扰您了，我这里是受用钱宝平台委托的元海公司，李刚使用这个手机号注册了用钱宝，麻烦您转告一下李刚，6月6日在用钱宝平台申请的借款已经逾期10天了，今天晚上10点是最后期限，让他赶紧处理一下，祝您生活愉快，再见。"
+                }
+            ],
+            "top": 256,
+            "left": 761,
+            "name": "非本人转告",
+            "width": 129,
+            "type": "speak",
+            "script": "",
+            "height": 28
+        },
+        "flow-content_node_13": {
+            "top": 231,
+            "left": 170,
+            "name": "Abnormal_count_1++",
+            "width": 184,
+            "type": "operation",
+            "script": "Abnormal_count_1++",
+            "height": 38
+        },
+        "flow-content_node_24": {
+            "tts": [
+                {
+                    "record": "CKGZ.wav",
+                    "text": "您好，这里是受用钱宝平台委托的元海公司，您6月6日在用钱宝平台申请的借款1000元，已经逾期10天了，今天晚上10点是最后期限，您现在赶紧处理一下好吧。"
+                }
+            ],
+            "top": 349,
+            "left": 400,
+            "name": "催款告知",
+            "width": 129,
+            "type": "speak",
+            "script": "",
+            "height": 28
+        },
+        "flow-content_node_46": {
+            "tts": [
+                {
+                    "record": "CKGZM.wav",
+                    "text": "您好，这里是受用钱宝平台委托的元海公司，只占用你几分钟时间，说一下关于你借款的事情。您6月6日在用钱宝平台申请的借款1000元，已经逾期10天了，今天晚上10点是最后期限，您现在赶紧处理一下好吧。"
+                }
+            ],
+            "top": 255,
+            "left": 598,
+            "name": "催款告知忙",
+            "width": 129,
+            "type": "speak",
+            "script": "",
+            "height": 28
+        },
+        "flow-content_node_22": {
+            "top": 468,
+            "left": 238,
+            "name": "end",
+            "width": 24,
+            "type": "end",
+            "script": "",
+            "height": 24
+        },
+        "flow-content_node_17": {
+            "tts": [
+                {
+                    "record": "ZCQR_1.wav,wav,ZCQR_2.wav",
+                    "text": "这里是受用钱宝平台委托的元海公司，您是#{name}#吗？"
+                }
+            ],
+            "top": 134,
+            "left": 71,
+            "name": "再次确认",
+            "width": 129,
+            "type": "speak",
+            "script": "",
+            "height": 28
+        },
+        "flow-content_node_27": {
+            "top": 438,
+            "left": 403,
+            "name": "理解结果",
+            "width": 129,
+            "type": "nlu",
+            "script": "",
+            "height": 28
+        },
+        "flow-content_node_38": {
+            "tts": [
+                {
+                    "record": "A3.wav",
+                    "text": "建议您可以跟亲朋好友借款周转一下，逾期会产生额外的违约金和滞纳金，逾期产生的不良记录会一直保存下去，影响您日后的工作和生活。请您及时处理，以免造成严重后果。祝您生活愉快，再见。"
+                }
+            ],
+            "top": 524,
+            "left": 920,
+            "name": "A3",
+            "width": 129,
+            "type": "speak",
+            "script": "",
+            "height": 26
+        },
+        "flow-content_node_26": {
+            "top": 399,
+            "left": 400,
+            "name": "机器听",
+            "width": 130,
+            "model": "",
+            "type": "listen",
+            "script": "",
+            "height": 28
+        },
+        "flow-content_node_37": {
+            "tts": [
+                {
+                    "record": "A2.wav",
+                    "text": "不好意思打扰您了，这边稍后会进行核实，给您造成不便，敬请谅解，感谢您对用钱宝的支持，祝您生活愉快，再见。"
+                }
+            ],
+            "top": 520,
+            "left": 755,
+            "name": "A2",
+            "width": 129,
+            "type": "speak",
+            "script": "",
+            "height": 26
+        },
+        "flow-content_node_50": {
+            "top": 335,
+            "left": 736,
+            "name": "end",
+            "width": 24,
+            "type": "end",
+            "script": "",
+            "height": 24
+        },
+        "flow-content_node_8": {
+            "top": 132,
+            "left": 395,
+            "name": "机器听",
+            "width": 130,
+            "model": "",
+            "type": "listen",
+            "script": "",
+            "height": 28
+        },
+        "flow-content_node_9": {
+            "top": 172,
+            "left": 395,
+            "name": "理解结果",
+            "width": 129,
+            "type": "nlu",
+            "script": "",
+            "height": 28
+        },
+        "flow-content_node_32": {
+            "top": 645,
+            "left": 456,
+            "name": "end",
+            "width": 24,
+            "type": "end",
+            "script": "",
+            "height": 24
+        },
+        "flow-content_node_20": {
+            "tts": [
+                {
+                    "record": "TZJS.wav",
+                    "text": "您好，李刚使用这个手机号注册了用钱宝，并于6月6日在用钱宝平台借款1000元，已经逾期10天，明天10点之前必须处理欠款。那就不打扰您了，祝您生活愉快，再见。"
+                }
+            ],
+            "top": 414,
+            "left": 200,
+            "name": "通知结束",
+            "width": 129,
+            "type": "speak",
+            "script": "",
+            "height": 28
+        },
+        "flow-content_node_30": {
+            "tts": [
+                {
+                    "record": "JSY.wav",
+                    "text": "请在规定时间内还款，逾期会产生额外的违约金和滞纳金，逾期产生的不良记录会一直保存下去，影响您日后的工作和生活。有任何问题请及时联系客服电话10108818。祝您生活愉快，再见。"
+                }
+            ],
+            "top": 554,
+            "left": 407,
+            "name": "结束语",
+            "width": 129,
+            "type": "speak",
+            "script": "",
+            "height": 28
+        }
+    },
+    "lines": {
+        "flow-content_line_19": {
+            "type": "sl",
+            "from": "flow-content_node_17",
+            "to": "flow-content_node_8",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_39": {
+            "type": "tb",
+            "M": 483,
+            "from": "flow-content_node_27",
+            "to": "flow-content_node_36",
+            "name": "Q1",
+            "marked": false
+        },
+        "flow-content_line_18": {
+            "type": "tb",
+            "M": 343,
+            "from": "flow-content_node_14",
+            "to": "flow-content_node_17",
+            "name": "Abnormal_count_1==1",
+            "marked": false
+        },
+        "flow-content_line_15": {
+            "type": "lr",
+            "M": 254.75,
+            "from": "flow-content_node_9",
+            "to": "flow-content_node_13",
+            "name": "Noinput|nomatch|repeat|who|what",
+            "marked": false
+        },
+        "flow-content_line_16": {
+            "type": "sl",
+            "from": "flow-content_node_13",
+            "to": "flow-content_node_14",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_11": {
+            "type": "sl",
+            "from": "flow-content_node_7",
+            "to": "flow-content_node_8",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_12": {
+            "type": "sl",
+            "from": "flow-content_node_8",
+            "to": "flow-content_node_9",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_34": {
+            "type": "sl",
+            "from": "flow-content_node_30",
+            "to": "flow-content_node_32",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_31": {
+            "type": "sl",
+            "from": "flow-content_node_27",
+            "to": "flow-content_node_30",
+            "name": "Yes|Noinput|nomatch|Busy",
+            "marked": false
+        },
+        "flow-content_line_10": {
+            "type": "sl",
+            "from": "flow-content_node_1",
+            "to": "flow-content_node_7",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_51": {
+            "type": "tb",
+            "M": 304,
+            "from": "flow-content_node_46",
+            "to": "flow-content_node_50",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_52": {
+            "type": "tb",
+            "M": 303,
+            "from": "flow-content_node_47",
+            "to": "flow-content_node_50",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_28": {
+            "type": "sl",
+            "from": "flow-content_node_24",
+            "to": "flow-content_node_26",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_29": {
+            "type": "sl",
+            "from": "flow-content_node_26",
+            "to": "flow-content_node_27",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_48": {
+            "type": "tb",
+            "M": 216,
+            "from": "flow-content_node_9",
+            "to": "flow-content_node_46",
+            "name": "busy",
+            "marked": false
+        },
+        "flow-content_line_49": {
+            "type": "tb",
+            "M": 217.5,
+            "from": "flow-content_node_9",
+            "to": "flow-content_node_47",
+            "name": "no",
+            "marked": false
+        },
+        "flow-content_line_25": {
+            "type": "sl",
+            "from": "flow-content_node_9",
+            "to": "flow-content_node_24",
+            "name": "yes",
+            "marked": false
+        },
+        "flow-content_line_44": {
+            "type": "tb",
+            "M": 606,
+            "from": "flow-content_node_38",
+            "to": "flow-content_node_32",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_23": {
+            "type": "sl",
+            "from": "flow-content_node_20",
+            "to": "flow-content_node_22",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_45": {
+            "type": "lr",
+            "M": 605,
+            "from": "flow-content_node_27",
+            "to": "flow-content_node_24",
+            "name": "repeat",
+            "marked": false
+        },
+        "flow-content_line_42": {
+            "type": "tb",
+            "M": 606.5,
+            "from": "flow-content_node_36",
+            "to": "flow-content_node_32",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_21": {
+            "type": "sl",
+            "from": "flow-content_node_14",
+            "to": "flow-content_node_20",
+            "name": "Abnormal_count_1==2",
+            "marked": false
+        },
+        "flow-content_line_43": {
+            "type": "tb",
+            "M": 607,
+            "from": "flow-content_node_37",
+            "to": "flow-content_node_32",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_40": {
+            "type": "tb",
+            "M": 482.5,
+            "from": "flow-content_node_27",
+            "to": "flow-content_node_37",
+            "name": "Q2",
+            "marked": false
+        },
+        "flow-content_line_41": {
+            "type": "tb",
+            "M": 483.5,
+            "from": "flow-content_node_27",
+            "to": "flow-content_node_38",
+            "name": "Q3",
+            "marked": false
+        }
+    },
+    "areas": {}
+}

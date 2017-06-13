@@ -1,0 +1,968 @@
+{
+  "nodes": {
+    "flow-content_node_1": {
+      "name": "开始",
+      "left": 499,
+      "top": 32,
+      "type": "start",
+      "width": 24,
+      "height": 24,
+      "input": [],
+      "variable": [
+        {
+          "name": "异常输入1",
+          "type": "int",
+          "initial_value": 0,
+          "field": "Abnormalcount_1"
+        },
+        {
+          "name": "异常输入2",
+          "type": "int",
+          "initial_value": 0,
+          "field": "Abnormalcount_2"
+        },
+        {
+          "name": "异常输入3",
+          "type": "int",
+          "initial_value": 0,
+          "field": "Abnormalcount_3"
+        },
+        {
+          "name": "异常输入4",
+          "type": "int",
+          "initial_value": 0,
+          "field": "Abnormalcount_4"
+        },
+        {
+          "name": "异常输入5",
+          "type": "int",
+          "initial_value": 0,
+          "field": "Abnormalcount_5"
+        },
+        {
+          "name": "异常输入6",
+          "type": "int",
+          "initial_value": 0,
+          "field": "Abnormalcount_6"
+        }
+      ],
+      "output": []
+    },
+    "flow-content_node_6": {
+      "name": "确认身份",
+      "left": 470,
+      "top": 103,
+      "type": "speak",
+      "width": 86,
+      "height": 24,
+      "script": "",
+      "tts": [
+        {
+          "text": "您好，我是国融证券总部1001号客服，请问您是张小明先生吗？",
+          "record": "确认身份.wav"
+        }
+      ]
+    },
+    "flow-content_node_9": {
+      "name": "机器听",
+      "left": 470,
+      "top": 160,
+      "type": "listen",
+      "width": 86,
+      "height": 24,
+      "model": "",
+      "script": ""
+    },
+    "flow-content_node_11": {
+      "name": "理解结果",
+      "left": 469,
+      "top": 217,
+      "type": "nlu",
+      "width": 84,
+      "height": 22,
+      "script": ""
+    },
+    "flow-content_node_13": {
+      "name": "Abnormalcount_1++",
+      "left": 75,
+      "top": 293,
+      "type": "operation",
+      "width": 140,
+      "height": 32,
+      "script": "Abnormalcount_1++"
+    },
+    "flow-content_node_14": {
+      "name": "Abnormalcount_1==？",
+      "left": 70,
+      "top": 350,
+      "type": "judge",
+      "width": 149,
+      "height": 34,
+      "script": ""
+    },
+    "flow-content_node_18": {
+      "name": "打扰结束语",
+      "left": 341,
+      "top": 427,
+      "type": "speak",
+      "width": 86,
+      "height": 24,
+      "script": "",
+      "tts": [
+        {
+          "text": "您的情况我已经记录，如果需要我们会对您进行二次回访，抱歉打扰到您了，祝您生活愉快，再见。",
+          "record": "打扰结束.wav"
+        }
+      ]
+    },
+    "flow-content_node_19": {
+      "name": "结束",
+      "left": 371,
+      "top": 486,
+      "type": "end",
+      "width": 24,
+      "height": 24
+    },
+    "flow-content_node_23": {
+      "name": "回访提示语及问题一",
+      "left": 469,
+      "top": 489,
+      "type": "speak",
+      "width": 86,
+      "height": 38,
+      "script": "",
+      "tts": [
+        {
+          "text": "您好，打扰您了，您最近在我们国融证券北京北辰东路营业部新开了交易账户，在此欢迎您加入国融证券。今天给您致电是根据中国证监会的要求对您做个简短的新开户回访，请问您是亲自到营业部柜台开户的吗？您回答是或不是就可以的。",
+          "record": "回访提示语及问题一.wav"
+        }
+      ]
+    },
+    "flow-content_node_25": {
+      "name": "机器听",
+      "left": 469,
+      "top": 562,
+      "type": "listen",
+      "width": 86,
+      "height": 24,
+      "model": "",
+      "script": ""
+    },
+    "flow-content_node_26": {
+      "name": "理解结果",
+      "left": 469,
+      "top": 623,
+      "type": "nlu",
+      "width": 86,
+      "height": 24,
+      "script": ""
+    },
+    "flow-content_node_30": {
+      "name": "Abnormalcount_2++",
+      "left": 161,
+      "top": 693,
+      "type": "operation",
+      "width": 148,
+      "height": 32,
+      "script": "Abnormalcount_2++"
+    },
+    "flow-content_node_31": {
+      "name": "Abnormalcount_2==？",
+      "left": 159,
+      "top": 762,
+      "type": "judge",
+      "width": 152,
+      "height": 34,
+      "script": ""
+    },
+    "flow-content_node_35": {
+      "name": "简化问题一",
+      "left": 69,
+      "top": 570,
+      "type": "speak",
+      "width": 86,
+      "height": 24,
+      "script": "",
+      "tts": [
+        {
+          "text": "现在是根据中国证监会的要求对您做个简短的新开户回访，请问您是亲自到营业部柜台开户的吗？",
+          "record": "简化问题一.wav"
+        }
+      ]
+    },
+    "flow-content_node_39": {
+      "name": "问题二话术",
+      "left": 469,
+      "top": 822,
+      "type": "speak",
+      "width": 86,
+      "height": 24,
+      "script": "",
+      "tts": [
+        {
+          "text": "请问您的初始密码是否您本人设置的呢？",
+          "record": "问题二.wav"
+        }
+      ]
+    },
+    "flow-content_node_40": {
+      "name": "打扰结束语",
+      "left": 965,
+      "top": 1986,
+      "type": "speak",
+      "width": 84,
+      "height": 22,
+      "script": "",
+      "tts": [
+        {
+          "text": "您的情况我已经记录，如果需要我们会对您进行二次回访，抱歉打扰到您了，祝您生活愉快，再见。",
+          "record": "打扰结束.wav"
+        }
+      ]
+    },
+    "flow-content_node_44": {
+      "name": "机器听",
+      "left": 467,
+      "top": 881,
+      "type": "listen",
+      "width": 86,
+      "height": 24,
+      "model": "",
+      "script": ""
+    },
+    "flow-content_node_45": {
+      "name": "理解结果",
+      "left": 467,
+      "top": 939,
+      "type": "nlu",
+      "width": 86,
+      "height": 24,
+      "script": ""
+    },
+    "flow-content_node_48": {
+      "name": "Abnormalcount_3++",
+      "left": 163,
+      "top": 1003,
+      "type": "operation",
+      "width": 136,
+      "height": 32,
+      "script": "Abnormalcount_3++"
+    },
+    "flow-content_node_49": {
+      "name": "Abnormalcount_3==？",
+      "left": 160,
+      "top": 1071,
+      "type": "judge",
+      "width": 145,
+      "height": 34,
+      "script": ""
+    },
+    "flow-content_node_52": {
+      "name": "简化问题二",
+      "left": 75,
+      "top": 883,
+      "type": "speak",
+      "width": 86,
+      "height": 24,
+      "script": "",
+      "tts": [
+        {
+          "text": "不好意思，没有听清您的回话，请问初始密码是您本人设置的吗？",
+          "record": "简化问题二.wav"
+        }
+      ]
+    },
+    "flow-content_node_57": {
+      "name": "修改密码话术",
+      "left": 649,
+      "top": 1138,
+      "type": "speak",
+      "width": 105,
+      "height": 26,
+      "script": "",
+      "tts": [
+        {
+          "text": "请您及时修改密码。",
+          "record": "修改密码话术.wav"
+        }
+      ]
+    },
+    "flow-content_node_59": {
+      "name": "问题三话术",
+      "left": 465,
+      "top": 1140,
+      "type": "speak",
+      "width": 86,
+      "height": 24,
+      "script": "",
+      "tts": [
+        {
+          "text": "请问您在营业部已经签署了相关开户协议并阅读风险揭示书了吗？",
+          "record": "问题三.wav"
+        }
+      ]
+    },
+    "flow-content_node_61": {
+      "name": "机器听",
+      "left": 463,
+      "top": 1192,
+      "type": "listen",
+      "width": 86,
+      "height": 24,
+      "model": "",
+      "script": ""
+    },
+    "flow-content_node_63": {
+      "name": "理解结果",
+      "left": 463,
+      "top": 1241,
+      "type": "nlu",
+      "width": 86,
+      "height": 24,
+      "script": ""
+    },
+    "flow-content_node_65": {
+      "name": "Abnormalcount_4++",
+      "left": 159,
+      "top": 1299,
+      "type": "operation",
+      "width": 144,
+      "height": 32,
+      "script": "Abnormalcount_4++"
+    },
+    "flow-content_node_68": {
+      "name": "Abnormalcount_4==？",
+      "left": 156,
+      "top": 1356,
+      "type": "judge",
+      "width": 153,
+      "height": 34,
+      "script": ""
+    },
+    "flow-content_node_70": {
+      "name": "简化问题三",
+      "left": 66,
+      "top": 1194,
+      "type": "speak",
+      "width": 86,
+      "height": 24,
+      "script": "",
+      "tts": [
+        {
+          "text": "抱歉，这边没有听清您的回话，请问您是否已经签署开户协议并阅读风险揭示书了呢？",
+          "record": "简化问题三.wav"
+        }
+      ]
+    },
+    "flow-content_node_74": {
+      "name": "风险揭示书回话",
+      "left": 773,
+      "top": 1417,
+      "type": "speak",
+      "width": 109,
+      "height": 25,
+      "script": "",
+      "tts": [
+        {
+          "text": "您开户的时候已经签署了风险揭示书，内容您可以查看开户协议，请问您都清楚了吗？",
+          "record": "风险揭示书回话.wav"
+        }
+      ]
+    },
+    "flow-content_node_77": {
+      "name": "机器听",
+      "left": 781,
+      "top": 1467,
+      "type": "listen",
+      "width": 86,
+      "height": 24,
+      "model": "",
+      "script": ""
+    },
+    "flow-content_node_78": {
+      "name": "理解结果",
+      "left": 780,
+      "top": 1516,
+      "type": "nlu",
+      "width": 86,
+      "height": 24,
+      "script": ""
+    },
+    "flow-content_node_84": {
+      "name": "Abnormalcount_5++",
+      "left": 594,
+      "top": 1588,
+      "type": "operation",
+      "width": 136,
+      "height": 25,
+      "script": "Abnormalcount_5++"
+    },
+    "flow-content_node_85": {
+      "name": "Abnormalcount_5==？",
+      "left": 590,
+      "top": 1642,
+      "type": "judge",
+      "width": 158,
+      "height": 26,
+      "script": ""
+    },
+    "flow-content_node_88": {
+      "name": "重复风险揭示书话术",
+      "left": 525,
+      "top": 1469,
+      "type": "speak",
+      "width": 86,
+      "height": 38,
+      "script": "",
+      "tts": [
+        {
+          "text": "抱歉，没有听清您的回话，您在开户时候已经签署了风险揭示书，相关内容您可以查看开户协议，请问您是否清楚？",
+          "record": "重复风险揭示书回话.wav"
+        }
+      ]
+    },
+    "flow-content_node_94": {
+      "name": "风险提示话术",
+      "left": 456,
+      "top": 1700,
+      "type": "speak",
+      "width": 97,
+      "height": 28,
+      "script": "",
+      "tts": [
+        {
+          "text": "好的，那我们提醒您我们的员工或客户经理不能给您提供全权委托和代客理财服务，在您开立账户后，交易和转账应由您本人亲自操作，不要委托他人进行，请问您都清楚了吗？",
+          "record": "风险提示话术.wav"
+        }
+      ]
+    },
+    "flow-content_node_97": {
+      "name": "机器听",
+      "left": 457,
+      "top": 1756,
+      "type": "listen",
+      "width": 86,
+      "height": 24,
+      "model": "",
+      "script": ""
+    },
+    "flow-content_node_98": {
+      "name": "理解结果",
+      "left": 458,
+      "top": 1805,
+      "type": "nlu",
+      "width": 84,
+      "height": 22,
+      "script": ""
+    },
+    "flow-content_node_102": {
+      "name": "Abnormalcount_6++",
+      "left": 152,
+      "top": 1866,
+      "type": "operation",
+      "width": 144,
+      "height": 24,
+      "script": "Abnormalcount_6++"
+    },
+    "flow-content_node_104": {
+      "name": "Abnormalcount_6==？",
+      "left": 146,
+      "top": 1914,
+      "type": "judge",
+      "width": 151,
+      "height": 28,
+      "script": ""
+    },
+    "flow-content_node_106": {
+      "name": "重复风险提示话术",
+      "left": 68,
+      "top": 1749,
+      "type": "speak",
+      "width": 84,
+      "height": 38,
+      "script": "",
+      "tts": [
+        {
+          "text": "不好意思，没有听清您的回话，我们提醒您在您开立账户后，交易和转账应由您本人亲自操作，不要委托他人进行，请问您都清楚了吗？",
+          "record": "重复风险提示话术.wav"
+        }
+      ]
+    },
+    "flow-content_node_114": {
+      "name": "正常结束语",
+      "left": 456,
+      "top": 1986,
+      "type": "speak",
+      "width": 86,
+      "height": 24,
+      "script": "",
+      "tts": [
+        {
+          "text": "好的，如果您以后有什么疑问或需求建议，欢迎您拨打客户电话4006609839咨询或与您的客户经理联系。非常感谢您对我们工作的支持，国融证券祝您投资顺利，再见。",
+          "record": "正常结束.wav"
+        }
+      ]
+    },
+    "flow-content_node_118": {
+      "name": "结束",
+      "left": 742,
+      "top": 2079,
+      "type": "end",
+      "width": 24,
+      "height": 24
+    }
+  },
+  "lines": {
+    "flow-content_line_7": {
+      "type": "sl",
+      "from": "flow-content_node_1",
+      "to": "flow-content_node_6",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_10": {
+      "type": "sl",
+      "from": "flow-content_node_6",
+      "to": "flow-content_node_9",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_12": {
+      "type": "sl",
+      "from": "flow-content_node_9",
+      "to": "flow-content_node_11",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_15": {
+      "type": "tb",
+      "M": 254,
+      "from": "flow-content_node_11",
+      "to": "flow-content_node_13",
+      "name": "Noinput|Nomatch",
+      "marked": false
+    },
+    "flow-content_line_16": {
+      "type": "sl",
+      "from": "flow-content_node_13",
+      "to": "flow-content_node_14",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_17": {
+      "type": "lr",
+      "M": 50.25,
+      "from": "flow-content_node_14",
+      "to": "flow-content_node_6",
+      "name": "Abnormalcount_1==1",
+      "marked": false
+    },
+    "flow-content_line_20": {
+      "type": "tb",
+      "M": 253.5,
+      "from": "flow-content_node_11",
+      "to": "flow-content_node_18",
+      "name": "No|Busy",
+      "marked": false
+    },
+    "flow-content_line_21": {
+      "type": "lr",
+      "M": 383.25,
+      "from": "flow-content_node_14",
+      "to": "flow-content_node_18",
+      "name": "Abnormalcount_1>1",
+      "marked": false
+    },
+    "flow-content_line_22": {
+      "type": "sl",
+      "from": "flow-content_node_18",
+      "to": "flow-content_node_19",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_24": {
+      "type": "sl",
+      "from": "flow-content_node_11",
+      "to": "flow-content_node_23",
+      "name": "Yes",
+      "marked": false
+    },
+    "flow-content_line_27": {
+      "type": "sl",
+      "from": "flow-content_node_23",
+      "to": "flow-content_node_25",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_28": {
+      "type": "sl",
+      "from": "flow-content_node_25",
+      "to": "flow-content_node_26",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_32": {
+      "type": "tb",
+      "M": 672,
+      "from": "flow-content_node_26",
+      "to": "flow-content_node_30",
+      "name": "Noinput|Nomatch",
+      "marked": false
+    },
+    "flow-content_line_33": {
+      "type": "sl",
+      "from": "flow-content_node_30",
+      "to": "flow-content_node_31",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_36": {
+      "type": "lr",
+      "M": 110.5,
+      "from": "flow-content_node_31",
+      "to": "flow-content_node_35",
+      "name": "Abnormalcount_2==1",
+      "marked": false
+    },
+    "flow-content_line_37": {
+      "type": "sl",
+      "from": "flow-content_node_35",
+      "to": "flow-content_node_25",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_41": {
+      "type": "tb",
+      "M": 672.5,
+      "from": "flow-content_node_26",
+      "to": "flow-content_node_40",
+      "name": "No|Busy",
+      "marked": false
+    },
+    "flow-content_line_42": {
+      "type": "sl",
+      "from": "flow-content_node_26",
+      "to": "flow-content_node_39",
+      "name": "Yes",
+      "marked": false
+    },
+    "flow-content_line_43": {
+      "type": "lr",
+      "M": 1007.5,
+      "from": "flow-content_node_31",
+      "to": "flow-content_node_40",
+      "name": "Abnormalcount_2>1",
+      "marked": false
+    },
+    "flow-content_line_46": {
+      "type": "sl",
+      "from": "flow-content_node_39",
+      "to": "flow-content_node_44",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_47": {
+      "type": "sl",
+      "from": "flow-content_node_44",
+      "to": "flow-content_node_45",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_50": {
+      "type": "tb",
+      "M": 985,
+      "from": "flow-content_node_45",
+      "to": "flow-content_node_48",
+      "name": "Noinput|Nomatch",
+      "marked": false
+    },
+    "flow-content_line_51": {
+      "type": "sl",
+      "from": "flow-content_node_48",
+      "to": "flow-content_node_49",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_53": {
+      "type": "lr",
+      "M": 112.25,
+      "from": "flow-content_node_49",
+      "to": "flow-content_node_52",
+      "name": "Abnormalcount_3==1",
+      "marked": false
+    },
+    "flow-content_line_54": {
+      "type": "lr",
+      "M": 1008.25,
+      "from": "flow-content_node_49",
+      "to": "flow-content_node_40",
+      "name": "Abnormalcount_3>1",
+      "marked": false
+    },
+    "flow-content_line_55": {
+      "type": "tb",
+      "M": 984.5,
+      "from": "flow-content_node_45",
+      "to": "flow-content_node_40",
+      "name": "Busy",
+      "marked": false
+    },
+    "flow-content_line_58": {
+      "type": "tb",
+      "M": 985.5,
+      "from": "flow-content_node_45",
+      "to": "flow-content_node_57",
+      "name": "No",
+      "marked": false
+    },
+    "flow-content_line_60": {
+      "type": "sl",
+      "from": "flow-content_node_45",
+      "to": "flow-content_node_59",
+      "name": "Yes",
+      "marked": false
+    },
+    "flow-content_line_62": {
+      "type": "sl",
+      "from": "flow-content_node_59",
+      "to": "flow-content_node_61",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_64": {
+      "type": "sl",
+      "from": "flow-content_node_61",
+      "to": "flow-content_node_63",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_67": {
+      "type": "tb",
+      "M": 1281,
+      "from": "flow-content_node_63",
+      "to": "flow-content_node_65",
+      "name": "Noinput|Nomatch",
+      "marked": false
+    },
+    "flow-content_line_69": {
+      "type": "sl",
+      "from": "flow-content_node_65",
+      "to": "flow-content_node_68",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_71": {
+      "type": "lr",
+      "M": 109.75,
+      "from": "flow-content_node_68",
+      "to": "flow-content_node_70",
+      "name": "Abnormalcount_4==1",
+      "marked": false
+    },
+    "flow-content_line_72": {
+      "type": "sl",
+      "from": "flow-content_node_70",
+      "to": "flow-content_node_61",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_73": {
+      "type": "tb",
+      "M": 1375.5,
+      "from": "flow-content_node_68",
+      "to": "flow-content_node_40",
+      "name": "Abnormalcount_4>1",
+      "marked": false
+    },
+    "flow-content_line_76": {
+      "type": "tb",
+      "M": 1280.25,
+      "from": "flow-content_node_63",
+      "to": "flow-content_node_74",
+      "name": "FAQ|No",
+      "marked": false
+    },
+    "flow-content_line_79": {
+      "type": "sl",
+      "from": "flow-content_node_74",
+      "to": "flow-content_node_77",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_80": {
+      "type": "sl",
+      "from": "flow-content_node_77",
+      "to": "flow-content_node_78",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_86": {
+      "type": "tb",
+      "M": 1564.75,
+      "from": "flow-content_node_78",
+      "to": "flow-content_node_84",
+      "name": "Noinput|Nomatch",
+      "marked": false
+    },
+    "flow-content_line_87": {
+      "type": "sl",
+      "from": "flow-content_node_84",
+      "to": "flow-content_node_85",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_89": {
+      "type": "lr",
+      "M": 569.5,
+      "from": "flow-content_node_85",
+      "to": "flow-content_node_88",
+      "name": "Abnormalcount_5==1",
+      "marked": false
+    },
+    "flow-content_line_90": {
+      "type": "tb",
+      "M": 1655.5,
+      "from": "flow-content_node_85",
+      "to": "flow-content_node_40",
+      "name": "Abnormalcount_5>1",
+      "marked": false
+    },
+    "flow-content_line_92": {
+      "type": "tb",
+      "M": 1565,
+      "from": "flow-content_node_78",
+      "to": "flow-content_node_40",
+      "name": "No|Busy",
+      "marked": false
+    },
+    "flow-content_line_93": {
+      "type": "sl",
+      "from": "flow-content_node_88",
+      "to": "flow-content_node_77",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_95": {
+      "type": "sl",
+      "from": "flow-content_node_63",
+      "to": "flow-content_node_94",
+      "name": "Yes",
+      "marked": false
+    },
+    "flow-content_line_99": {
+      "type": "sl",
+      "from": "flow-content_node_94",
+      "to": "flow-content_node_97",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_101": {
+      "type": "sl",
+      "from": "flow-content_node_97",
+      "to": "flow-content_node_98",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_103": {
+      "type": "tb",
+      "M": 1843.5,
+      "from": "flow-content_node_98",
+      "to": "flow-content_node_102",
+      "name": "Noinput|Nomatch",
+      "marked": false
+    },
+    "flow-content_line_105": {
+      "type": "sl",
+      "from": "flow-content_node_102",
+      "to": "flow-content_node_104",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_108": {
+      "type": "lr",
+      "M": 104.25,
+      "from": "flow-content_node_104",
+      "to": "flow-content_node_106",
+      "name": "Abnormalcount_6==1",
+      "marked": false
+    },
+    "flow-content_line_109": {
+      "type": "sl",
+      "from": "flow-content_node_106",
+      "to": "flow-content_node_97",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_111": {
+      "type": "tb",
+      "M": 1928.5,
+      "from": "flow-content_node_104",
+      "to": "flow-content_node_40",
+      "name": "Abnormalcount_6>1",
+      "marked": false
+    },
+    "flow-content_line_113": {
+      "type": "tb",
+      "M": 1843.5,
+      "from": "flow-content_node_98",
+      "to": "flow-content_node_40",
+      "name": "No|Busy",
+      "marked": false
+    },
+    "flow-content_line_115": {
+      "type": "sl",
+      "from": "flow-content_node_98",
+      "to": "flow-content_node_114",
+      "name": "Yes",
+      "marked": false
+    },
+    "flow-content_line_119": {
+      "type": "tb",
+      "M": 2042,
+      "from": "flow-content_node_40",
+      "to": "flow-content_node_118",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_120": {
+      "type": "tb",
+      "M": 2042.5,
+      "from": "flow-content_node_114",
+      "to": "flow-content_node_118",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_121": {
+      "type": "sl",
+      "from": "flow-content_node_52",
+      "to": "flow-content_node_44",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_123": {
+      "type": "tb",
+      "M": 1203,
+      "from": "flow-content_node_57",
+      "to": "flow-content_node_40",
+      "name": "",
+      "marked": false
+    },
+    "flow-content_line_124": {
+      "type": "tb",
+      "M": 1684,
+      "from": "flow-content_node_78",
+      "to": "flow-content_node_94",
+      "name": "Yes",
+      "marked": false
+    },
+    "flow-content_line_125": {
+      "type": "tb",
+      "M": 1282,
+      "from": "flow-content_node_63",
+      "to": "flow-content_node_40",
+      "name": "Busy",
+      "marked": false
+    }
+  },
+  "areas": {}
+}

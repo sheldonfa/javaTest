@@ -13,4 +13,14 @@ public class Client {
     }
 }
 
+/*      father static	// 父的静态代码块
+        child static	// 子的静态代码块，它们都是在类加载的时候执行的，创建两个对象也只执行一次。
+        father dynamic
+        father constructor
+        child dynamic
+        child constructor
+        father dynamic
+        father constructor
+        child dynamic
+        child constructor*/
 

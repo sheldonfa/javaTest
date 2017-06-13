@@ -2,6 +2,8 @@ package com.javabase.basictype;
 
 import org.junit.Test;
 
+import java.math.BigInteger;
+
 /**
  * @author fangxin
  * @description ${END}
@@ -20,6 +22,12 @@ public class baseType {
         Integer c = 1000;
         Integer d = 1000;
         System.out.println(c==d);
+    }
+
+    @Test
+    public void test2(){
+        long a = 99999999999l;
+        System.out.println(a);
     }
 
 

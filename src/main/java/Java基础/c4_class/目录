@@ -1,1 +1,2 @@
 demo1   父类、子类的静态代码块、代码块、构造函数、执行顺序问题
+demo2   super.getClass是什么鬼

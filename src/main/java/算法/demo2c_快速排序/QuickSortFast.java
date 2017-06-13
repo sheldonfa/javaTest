@@ -1,7 +1,8 @@
-package com.algorithmsforimock.c3;
+package 算法.demo2c_快速排序;
 
 import com.algorithms.model.StdRandom;
 import com.algorithms.model.Tlt;
+import com.algorithmsforimock.c3.InsertionSort;
 
 /**
  * 快速排序优化
@@ -31,8 +32,8 @@ public class QuickSortFast {
         // arr[l+1...i) <= v; arr[j...r] >= v
         int i = l+1,j = r;
         while(true){
-            while(i <=r && arr[i]<=v) i++;
-            while(j >= l+1 && arr[j]>=v) j--;
+            while(i <=r && arr[i]<v) i++;
+            while(j >= l+1 && arr[j]>v) j--;
             if(i>j)break;
             Tlt.exch(arr,i,j);// 这种情况在arr[i]=v=arr[j]的情况下也会交换。但是好在将等于v的数据在part两部分平分了，阻止退化成on^2。
             i++;

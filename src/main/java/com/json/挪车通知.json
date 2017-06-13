@@ -1,0 +1,135 @@
+{
+    "nodes": {
+        "flow-content_node_1": {
+            "name": "start",
+            "left": 405,
+            "top": 113,
+            "type": "start",
+            "width": 24,
+            "height": 24,
+            "input": [
+                {
+                    "name": "车牌",
+                    "field": "plate",
+                    "type": "string",
+                    "require": "true",
+                    "default_value": ""
+                },
+                {
+                    "name": "发短信电话",
+                    "field": "Phone",
+                    "type": "string",
+                    "require": "true",
+                    "default_value": ""
+                },
+                {
+                    "name": "投诉人电话",
+                    "field": "TPhone",
+                    "type": "string",
+                    "require": "true",
+                    "default_value": ""
+                }
+            ],
+            "variable": [],
+            "output": []
+        },
+        "flow-content_node_2": {
+            "name": "挪车通知",
+            "left": 373,
+            "top": 187,
+            "type": "speak",
+            "width": 86,
+            "height": 24,
+            "script": "",
+            "tts": [
+                {
+                    "text": "您好，这里是车辆投诉中心，您名下的车辆#{CarPlate}#被投诉阻挡其他车辆，请尽快到现场挪车，感谢您的配合，祝您生活愉快，再见！",
+                    "record": "NC000001.wav,wave,NC000002.wav"
+                }
+            ]
+        },
+        "flow-content_node_3": {
+            "name": "end",
+            "left": 404,
+            "top": 332,
+            "type": "end",
+            "width": 24,
+            "height": 24,
+            "script": ""
+        },
+        "flow-content_node_6": {
+            "name": "理解结果",
+            "left": 373,
+            "top": 259,
+            "type": "nlu",
+            "width": 86,
+            "height": 24,
+            "script": ""
+        },
+        "flow-content_node_8": {
+            "name": "node_8",
+            "left": 248,
+            "top": 258,
+            "type": "listen",
+            "width": 82,
+            "height": 21,
+            "model": "",
+            "script": ""
+        },
+        "flow-content_node_14": {
+            "name": "node_14",
+            "left": 376,
+            "top": 305,
+            "type": "listen",
+            "width": 86,
+            "height": 24,
+            "model": "",
+            "script": ""
+        }
+    },
+    "lines": {
+        "flow-content_line_4": {
+            "type": "sl",
+            "from": "flow-content_node_1",
+            "to": "flow-content_node_2",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_7": {
+            "type": "sl",
+            "from": "flow-content_node_2",
+            "to": "flow-content_node_6",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_12": {
+            "type": "sl",
+            "from": "flow-content_node_6",
+            "to": "flow-content_node_8",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_15": {
+            "type": "sl",
+            "from": "flow-content_node_6",
+            "to": "flow-content_node_14",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_16": {
+            "type": "sl",
+            "from": "flow-content_node_14",
+            "to": "flow-content_node_3",
+            "name": "",
+            "marked": false
+        },
+        "flow-content_line_17": {
+            "type": "sl",
+            "from": "flow-content_node_8",
+            "to": "flow-content_node_3",
+            "name": "",
+            "marked": false
+        }
+    },
+    "areas": {}
+}
